@@ -1,2 +1,2 @@
 # fraudulent_qr_scan
-A fake app to scan your qr codes and redirect you to malicious websites
+A fake android app to scan your qr codes and redirect you to malicious websites
