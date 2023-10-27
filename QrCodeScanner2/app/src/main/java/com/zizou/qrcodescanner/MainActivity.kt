@@ -11,20 +11,21 @@ import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var qrCodeValueTextView: TextView
+    private lateinit var qrCodeValueButton: Button
     private lateinit var startScanButton: Button
 
     private val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == Activity.RESULT_OK) {
             val data = it.data?.getStringExtra(ScanQrCodeActivity.QR_CODE_KEY)
-            updateQrCodeTextView(data)
+            updateQrCodeButton(data)
         }
 
     }
-    private fun updateQrCodeTextView(data: String?) {
+    private fun updateQrCodeButton(data: String?) {
         data?.let {
             runOnUiThread {
-                qrCodeValueTextView.text = it
+                qrCodeValueButton.isEnabled = true
+                qrCodeValueButton.text = it
             }
         }
     }
@@ -33,15 +34,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        qrCodeValueTextView = findViewById(R.id.qr_code_value_tv)
+        qrCodeValueButton = findViewById(R.id.qr_code_value_button)
         startScanButton = findViewById(R.id.start_scan_button)
+        qrCodeValueButton.isEnabled = false
         initButtonClickListener()
     }
     private fun initButtonClickListener() {
         startScanButton.setOnClickListener {
             val intent = Intent(this, ScanQrCodeActivity::class.java)
+            qrCodeValueButton.isEnabled = false
             resultLauncher.launch(intent)
         }
 
+        qrCodeValueButton.setOnClickListener() {
+            val intent = Intent(this, WebPageActivity::class.java)
+            intent.putExtra("urlScanned", qrCodeValueButton.text)
+            qrCodeValueButton.isEnabled = false
+            resultLauncher.launch(intent)
+        }
     }
+
 }
