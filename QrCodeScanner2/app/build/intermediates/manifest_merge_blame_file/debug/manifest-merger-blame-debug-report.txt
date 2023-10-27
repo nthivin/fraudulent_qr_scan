@@ -5,12 +5,12 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="24"
+8        android:minSdkVersion="23"
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.CAMERA" />
-11-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:5:5-65
-11-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:5:22-62
+11-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:5:5-65
+11-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:5:22-62
 12
 13    <permission
 13-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
@@ -24,49 +24,49 @@
 17-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:6:5-28:19
+19-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:6:5-28:19
 20        android:allowBackup="true"
-20-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:7:9-35
+20-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:7:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 21-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:8:9-65
+22-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:8:9-65
 23        android:debuggable="true"
 24        android:extractNativeLibs="false"
 25        android:fullBackupContent="@xml/backup_rules"
-25-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:9:9-54
+25-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:9:9-54
 26        android:icon="@mipmap/ic_launcher"
-26-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:10:9-43
+26-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:10:9-43
 27        android:label="@string/app_name"
-27-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:11:9-41
+27-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:11:9-41
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:12:9-54
+28-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:12:9-54
 29        android:supportsRtl="true"
-29-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:13:9-35
+29-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:13:9-35
 30        android:testOnly="true"
 31        android:theme="@style/Theme.QrCodeScanner" >
-31-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:14:9-51
+31-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:14:9-51
 32        <activity
-32-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:9-18:40
+32-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:9-18:40
 33            android:name="com.zizou.qrcodescanner.ScanQrCodeActivity"
-33-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:17:13-47
+33-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:17:13-47
 34            android:exported="false" />
-34-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:18:13-37
+34-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:18:13-37
 35        <activity
-35-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:9-27:20
+35-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:9-27:20
 36            android:name="com.zizou.qrcodescanner.MainActivity"
-36-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:13-41
+36-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:13-41
 37            android:exported="true" >
-37-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:21:13-36
+37-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:21:13-36
 38            <intent-filter>
-38-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:13-26:29
+38-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:13-26:29
 39                <action android:name="android.intent.action.MAIN" />
-39-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:17-69
-39-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:25-66
+39-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:17-69
+39-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:25-66
 40
 41                <category android:name="android.intent.category.LAUNCHER" />
-41-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:17-77
-41-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:27-74
+41-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:17-77
+41-->/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:27-74
 42            </intent-filter>
 43        </activity>
 44        <activity
