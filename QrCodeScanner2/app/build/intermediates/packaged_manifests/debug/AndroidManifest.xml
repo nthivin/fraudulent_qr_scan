@@ -9,6 +9,7 @@
         android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
         android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -29,6 +30,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.QrCodeScanner" >
+        <activity
+            android:name="com.zizou.qrcodescanner.WebPageActivity"
+            android:exported="false" />
         <activity
             android:name="com.zizou.qrcodescanner.ScanQrCodeActivity"
             android:exported="false" />
