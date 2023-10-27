@@ -6,22 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/qr_code_value_tv"
+    <Button
+        android:id="@+id/qr_code_value_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        android:text="Votre URL ici"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
     
     <Button
         android:id="@+id/start_scan_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lancer le scan"
-        app:layout_constraintTop_toBottomOf="@id/qr_code_value_tv"
+        app:layout_constraintTop_toBottomOf="@id/qr_code_value_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
