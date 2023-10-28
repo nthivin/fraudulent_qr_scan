@@ -3327,6 +3327,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id webview
 id west
 id wide
 id withText
@@ -3446,6 +3447,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_scan_qr_code
+layout activity_web_page
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

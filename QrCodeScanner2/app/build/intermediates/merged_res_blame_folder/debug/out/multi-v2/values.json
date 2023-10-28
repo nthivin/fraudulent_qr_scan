@@ -23,6 +23,25 @@
                     }
                 },
                 {
+                    "source": "/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,328",
+                        "endLines": "5,7",
+                        "endColumns": "12,74",
+                        "endOffsets": "322,398"
+                    },
+                    "to": {
+                        "startLines": "2364,6235",
+                        "startColumns": "4,4",
+                        "startOffsets": "164605,433136",
+                        "endLines": "2367,6235",
+                        "endColumns": "12,73",
+                        "endOffsets": "164721,433205"
+                    }
+                },
+                {
                     "source": "/home/thivin/.gradle/caches/transforms-3/a6f6bc0a5b645ddb18673e5e79911bfd/transformed/fragment-1.3.6/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
@@ -39,23 +58,6 @@
                         "endLines": "1639,1671,1708,10920,10924",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "106143,107796,109710,679028,679177"
-                    }
-                },
-                {
-                    "source": "/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "50",
-                        "endOffsets": "62"
-                    },
-                    "to": {
-                        "startLines": "1802",
-                        "startColumns": "4",
-                        "startOffsets": "116020",
-                        "endColumns": "50",
-                        "endOffsets": "116066"
                     }
                 },
                 {
@@ -169,22 +171,20 @@
                     }
                 },
                 {
-                    "source": "/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res/values/themes.xml",
+                    "source": "/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,328",
-                        "endLines": "5,7",
-                        "endColumns": "12,74",
-                        "endOffsets": "322,398"
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "50",
+                        "endOffsets": "62"
                     },
                     "to": {
-                        "startLines": "2364,6235",
-                        "startColumns": "4,4",
-                        "startOffsets": "164605,433136",
-                        "endLines": "2367,6235",
-                        "endColumns": "12,73",
-                        "endOffsets": "164721,433205"
+                        "startLines": "1802",
+                        "startColumns": "4",
+                        "startOffsets": "116020",
+                        "endColumns": "50",
+                        "endOffsets": "116066"
                     }
                 },
                 {
@@ -279,23 +279,6 @@
                     }
                 },
                 {
-                    "source": "/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,97",
-                        "endColumns": "41,41",
-                        "endOffsets": "92,134"
-                    },
-                    "to": {
-                        "startLines": "619,891",
-                        "startColumns": "4,4",
-                        "startOffsets": "31578,51320",
-                        "endColumns": "41,41",
-                        "endOffsets": "31615,51357"
-                    }
-                },
-                {
                     "source": "/home/thivin/.gradle/caches/transforms-3/c8da0b00cb3dee3582f03f3d60b1ce57/transformed/constraintlayout-2.1.4/res/values/values.xml",
                     "from": {
                         "startLines": "2,9,10,15,16,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,42,43,44,45,55,63,64,65,70,71,76,81,82,83,88,89,94,95,100,101,102,108,109,110,115,121,122,123,124,130,131,132,133,136,139,142,143,146,149,150,151,152,153,156,159,160,161,162,168,173,176,179,180,181,186,187,188,191,194,195,198,201,204,207,208,209,212,215,216,221,222,228,233,236,239,240,241,242,243,244,245,246,247,248,249,250,266,272,273,274,275,276,283,289,290,291,294,299,300,308,309,310,311,312,313,314,315,324,325,326,332,333,339,343,344,345,346,347,356,360,361,362,380,566,694,700,704,874,1026,1039,1055,1080,1103,1106,1109,1112,1141,1168,1185,1271,1279,1292,1308,1312,1342,1355,1359,1369,1379,1423,1436,1440,1443,1459,1500,1535,1542,1559",
@@ -331,6 +314,23 @@
                         "endLines": "90,8729,10653,10737",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "4740,598145,667935,672451"
+                    }
+                },
+                {
+                    "source": "/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,97",
+                        "endColumns": "41,41",
+                        "endOffsets": "92,134"
+                    },
+                    "to": {
+                        "startLines": "619,891",
+                        "startColumns": "4,4",
+                        "startOffsets": "31578,51320",
+                        "endColumns": "41,41",
+                        "endOffsets": "31615,51357"
                     }
                 },
                 {
