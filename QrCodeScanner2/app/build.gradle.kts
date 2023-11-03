@@ -44,6 +44,7 @@ dependencies {
 
     implementation ("com.google.android.gms:play-services-vision:20.1.3")
     implementation("com.google.android.gms:play-services-vision-common:19.1.3")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
