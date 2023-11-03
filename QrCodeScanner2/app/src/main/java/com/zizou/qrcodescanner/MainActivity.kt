@@ -9,6 +9,18 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+import java.net.InetAddress
+import java.io.IOException
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
+import java.net.Socket
+import java.io.BufferedReader
+
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var qrCodeValueButton: Button
@@ -54,4 +66,36 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
+    private fun socketConnexion() {
+
+        GlobalScope.launch(Dispatchers.IO){
+            try {
+                val socket = Socket("172.21.202.2", 12345)
+
+                // obtenir les flux d'entrée et de sortie pour communiquer avec le serveur
+                val inputStream = socket.getInputStream()
+                val outputStream = socket.getOutputStream()
+
+                // Créer des BufferedReader et BufferedWriter pour lire et écrire des données
+                val reader = BufferedReader(InputStreamReader(inputStream))
+                val writer = OutputStreamWriter(outputStream)
+
+                // Écrire des données sur le flux de sortie
+                writer.write("test d envoie de donnees\n")
+                writer.flush()
+
+                // Lire des données depuis le flux d'entrée
+                val serverResponse = reader.readLine()
+
+
+                socket.close()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+
+
+        }
+    }
 }
