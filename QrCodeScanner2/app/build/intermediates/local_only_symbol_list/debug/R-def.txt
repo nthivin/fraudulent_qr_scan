@@ -7,8 +7,10 @@ drawable ic_launcher_foreground
 id qr_code_value_button
 id scan_surface_view
 id start_scan_button
+id webview
 layout activity_main
 layout activity_scan_qr_code
+layout activity_web_page
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

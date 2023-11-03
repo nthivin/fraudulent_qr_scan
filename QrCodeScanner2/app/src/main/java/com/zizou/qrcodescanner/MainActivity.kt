@@ -47,7 +47,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         qrCodeValueButton.setOnClickListener() {
-            val intent = Intent(this, ScanQrCodeActivity::class.java)
+            val intent = Intent(this, WebPageActivity::class.java)
+            intent.putExtra("urlScanned", qrCodeValueButton.text)
             qrCodeValueButton.isEnabled = false
             resultLauncher.launch(intent)
         }

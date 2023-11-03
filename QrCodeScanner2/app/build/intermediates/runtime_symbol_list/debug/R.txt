@@ -3326,6 +3326,7 @@ int id view_tree_saved_state_registry_owner 0x7f0801e7
 int id view_tree_view_model_store_owner 0x7f0801e8
 int id visible 0x7f0801e9
 int id visible_removing_fragment_view_tag 0x7f0801ea
+int id webview 0x7f0801f5
 int id west 0x7f0801eb
 int id wide 0x7f0801ec
 int id withText 0x7f0801ed
@@ -3445,6 +3446,7 @@ int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_main 0x7f0b001c
 int layout activity_scan_qr_code 0x7f0b001d
+int layout activity_web_page 0x7f0b006b
 int layout custom_dialog 0x7f0b001e
 int layout design_bottom_navigation_item 0x7f0b001f
 int layout design_bottom_sheet_dialog 0x7f0b0020
