@@ -5,25 +5,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
-import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 
 import android.Manifest
 import android.content.pm.PackageManager
 import android.location.Location
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import androidx.appcompat.app.AlertDialog
-import android.content.DialogInterface
 
-import java.io.IOException
-import java.net.InetAddress
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
@@ -52,18 +44,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.d("Zizou_Tag","Application started youpi")
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
-        if (checkLocationPermission()) {
-            getLocation()
-        }
+        getLocation()
 
         qrCodeValueButton = findViewById(R.id.qr_code_value_button)
         startScanButton = findViewById(R.id.start_scan_button)
         qrCodeValueButton.isEnabled = false
         initButtonClickListener()
     }
+
     private fun initButtonClickListener() {
         startScanButton.setOnClickListener {
             val intent = Intent(this, ScanQrCodeActivity::class.java)
@@ -78,14 +69,6 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch(intent)
         }
     }
-    private fun checkLocationPermission(): Boolean {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), requestLocationPermission)
-            return false
-        }
-        return true
-    }
-
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -111,6 +94,7 @@ class MainActivity : AppCompatActivity() {
             )
             return
         }
+
         fusedLocationClient.lastLocation
             .addOnSuccessListener { location: Location? ->
                 if (location != null) {

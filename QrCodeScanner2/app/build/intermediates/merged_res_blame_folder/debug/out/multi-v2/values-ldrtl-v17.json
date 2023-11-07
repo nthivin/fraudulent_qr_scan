@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zizou.qrcodescanner.app-mergeDebugResources-28:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.zizou.qrcodescanner.app-mergeDebugResources-29:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
                     "source": "/home/mpaul005/.gradle/caches/transforms-3/8d84fd92310784769bd5fac3f3db88d9/transformed/material-1.8.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",

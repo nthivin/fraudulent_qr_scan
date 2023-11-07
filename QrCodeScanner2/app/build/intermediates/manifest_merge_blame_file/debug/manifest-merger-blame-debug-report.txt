@@ -27,106 +27,143 @@
 16-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:10:5-78
 16-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:10:22-75
 17
-18    <permission
-18-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-19        android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-19-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-20        android:protectionLevel="signature" />
-20-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-21
-22    <uses-permission android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-22-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-22-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-23
-24    <application
-24-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:12:5-37:19
-25        android:allowBackup="true"
-25-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:13:9-35
-26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-27        android:dataExtractionRules="@xml/data_extraction_rules"
-27-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:14:9-65
-28        android:debuggable="true"
-29        android:extractNativeLibs="false"
-30        android:fullBackupContent="@xml/backup_rules"
-30-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:9-54
-31        android:icon="@mipmap/ic_launcher"
-31-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:9-43
-32        android:label="@string/app_name"
-32-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:17:9-41
-33        android:roundIcon="@mipmap/ic_launcher_round"
-33-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:18:9-54
-34        android:supportsRtl="true"
-34-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:9-35
-35        android:testOnly="true"
-36        android:theme="@style/Theme.QrCodeScanner" >
-36-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:9-51
-37        <activity
-37-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:9-24:40
-38            android:name="com.zizou.qrcodescanner.WebPageActivity"
-38-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:13-44
-39            android:exported="false" />
-39-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:24:13-37
-40        <activity
-40-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:9-27:40
-41            android:name="com.zizou.qrcodescanner.ScanQrCodeActivity"
-41-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:26:13-47
-42            android:exported="false" />
-42-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:27:13-37
-43        <activity
-43-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:28:9-36:20
-44            android:name="com.zizou.qrcodescanner.MainActivity"
-44-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:29:13-41
-45            android:exported="true" >
-45-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:13-36
-46            <intent-filter>
-46-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:31:13-35:29
-47                <action android:name="android.intent.action.MAIN" />
-47-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:17-69
-47-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:25-66
-48
-49                <category android:name="android.intent.category.LAUNCHER" />
-49-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:34:17-77
-49-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:34:27-74
-50            </intent-filter>
-51        </activity>
-52        <activity
-52-->[com.google.android.gms:play-services-base:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/3dee46b6221a988d2ce702b0eb4d13ab/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-53            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-53-->[com.google.android.gms:play-services-base:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/3dee46b6221a988d2ce702b0eb4d13ab/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-54            android:exported="false"
-54-->[com.google.android.gms:play-services-base:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/3dee46b6221a988d2ce702b0eb4d13ab/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-55            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-55-->[com.google.android.gms:play-services-base:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/3dee46b6221a988d2ce702b0eb4d13ab/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-56
-57        <meta-data
-57-->[com.google.android.gms:play-services-basement:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/dcb8c9b03f42b88d3a58ad22f72850c9/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-58            android:name="com.google.android.gms.version"
-58-->[com.google.android.gms:play-services-basement:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/dcb8c9b03f42b88d3a58ad22f72850c9/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-59            android:value="@integer/google_play_services_version" />
-59-->[com.google.android.gms:play-services-basement:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/dcb8c9b03f42b88d3a58ad22f72850c9/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-60
-61        <provider
-61-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-62            android:name="androidx.startup.InitializationProvider"
-62-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-63            android:authorities="com.zizou.qrcodescanner.androidx-startup"
-63-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-64            android:exported="false" >
-64-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-65            <meta-data
-65-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-66                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-66-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-67                android:value="androidx.startup" />
-67-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-68            <meta-data
-68-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mpaul005/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-69                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-69-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mpaul005/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-70                android:value="androidx.startup" />
-70-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mpaul005/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-71        </provider>
-72    </application>
-73
-74</manifest>
+18    <!-- Include required permissions for Google Maps API to run. -->
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+19-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
+20
+21    <uses-feature
+21-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+22        android:glEsVersion="0x00020000"
+22-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+23        android:required="true" />
+23-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+24
+25    <queries>
+25-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
+26
+27        <!-- Needs to be explicitly declared on Android R+ -->
+28        <package android:name="com.google.android.apps.maps" />
+28-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+28-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+29    </queries>
+30
+31    <permission
+31-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+32        android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+36
+37    <application
+37-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:12:5-42:19
+38        android:allowBackup="true"
+38-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:13:9-35
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.9.0] /home/mpaul005/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+40        android:dataExtractionRules="@xml/data_extraction_rules"
+40-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:14:9-65
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:fullBackupContent="@xml/backup_rules"
+43-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:9-54
+44        android:icon="@mipmap/ic_launcher"
+44-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:9-43
+45        android:label="@string/app_name"
+45-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:17:9-41
+46        android:roundIcon="@mipmap/ic_launcher_round"
+46-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:18:9-54
+47        android:supportsRtl="true"
+47-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:9-35
+48        android:testOnly="true"
+49        android:theme="@style/Theme.QrCodeScanner" >
+49-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:9-51
+50        <activity
+50-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:9-24:40
+51            android:name="com.zizou.qrcodescanner.WebPageActivity"
+51-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:13-44
+52            android:exported="false" />
+52-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:24:13-37
+53        <activity
+53-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:9-27:40
+54            android:name="com.zizou.qrcodescanner.ScanQrCodeActivity"
+54-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:26:13-47
+55            android:exported="false" />
+55-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:27:13-37
+56        <activity
+56-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:28:9-36:20
+57            android:name="com.zizou.qrcodescanner.MainActivity"
+57-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:29:13-41
+58            android:exported="true" >
+58-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:13-36
+59            <intent-filter>
+59-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:31:13-35:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:17-69
+60-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:34:17-77
+62-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:34:27-74
+63            </intent-filter>
+64        </activity>
+65
+66        <meta-data
+66-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:38:9-40:71
+67            android:name="com.google.android.geo.API_KEY"
+67-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:13-58
+68            android:value="AIzaSyAsQMtXEOompNP8b8hz5yZ4Yqt5XHU8EEA" />
+68-->/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:40:13-68
+69
+70        <!-- Needs to be explicitly declared on P+ -->
+71        <uses-library
+71-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+72            android:name="org.apache.http.legacy"
+72-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+73            android:required="false" />
+73-->[com.google.android.gms:play-services-maps:18.2.0] /home/mpaul005/.gradle/caches/transforms-3/6edc416f050f13018154f37e2057de15/transformed/play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+74
+75        <activity
+75-->[com.google.android.gms:play-services-base:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/3dee46b6221a988d2ce702b0eb4d13ab/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+76            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+76-->[com.google.android.gms:play-services-base:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/3dee46b6221a988d2ce702b0eb4d13ab/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+77            android:exported="false"
+77-->[com.google.android.gms:play-services-base:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/3dee46b6221a988d2ce702b0eb4d13ab/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+78            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+78-->[com.google.android.gms:play-services-base:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/3dee46b6221a988d2ce702b0eb4d13ab/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+79
+80        <meta-data
+80-->[com.google.android.gms:play-services-basement:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/dcb8c9b03f42b88d3a58ad22f72850c9/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+81            android:name="com.google.android.gms.version"
+81-->[com.google.android.gms:play-services-basement:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/dcb8c9b03f42b88d3a58ad22f72850c9/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+82            android:value="@integer/google_play_services_version" />
+82-->[com.google.android.gms:play-services-basement:18.1.0] /home/mpaul005/.gradle/caches/transforms-3/dcb8c9b03f42b88d3a58ad22f72850c9/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+83
+84        <provider
+84-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+85            android:name="androidx.startup.InitializationProvider"
+85-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+86            android:authorities="com.zizou.qrcodescanner.androidx-startup"
+86-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+87            android:exported="false" >
+87-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+88            <meta-data
+88-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+89-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+90                android:value="androidx.startup" />
+90-->[androidx.emoji2:emoji2:1.2.0] /home/mpaul005/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+91            <meta-data
+91-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mpaul005/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+92                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+92-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mpaul005/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+93                android:value="androidx.startup" />
+93-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mpaul005/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+94        </provider>
+95    </application>
+96
+97</manifest>
