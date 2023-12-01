@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res/values-night/themes.xml",
+                    "source": "/home/thivin/3a_rsr/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

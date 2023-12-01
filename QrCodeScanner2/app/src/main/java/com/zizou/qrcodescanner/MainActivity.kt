@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import android.util.Log
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Dispatchers
@@ -19,6 +20,8 @@ import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.net.Socket
 import java.io.BufferedReader
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -49,7 +52,12 @@ class MainActivity : AppCompatActivity() {
         qrCodeValueButton = findViewById(R.id.qr_code_value_button)
         startScanButton = findViewById(R.id.start_scan_button)
         qrCodeValueButton.isEnabled = false
+
+        newPacket("Première connexion")
+        newPacket("Nouveau paquet")
+
         initButtonClickListener()
+
     }
     private fun initButtonClickListener() {
         startScanButton.setOnClickListener {
@@ -68,11 +76,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    private fun socketConnexion() {
+    private fun newPacket(data: String) {
 
-        GlobalScope.launch(Dispatchers.IO){
+        GlobalScope.launch(Dispatchers.IO) {
             try {
-                val socket = Socket("172.21.202.2", 12345)
+                val socket = Socket("192.168.1.74", 12345)
 
                 // obtenir les flux d'entrée et de sortie pour communiquer avec le serveur
                 val inputStream = socket.getInputStream()
@@ -83,19 +91,17 @@ class MainActivity : AppCompatActivity() {
                 val writer = OutputStreamWriter(outputStream)
 
                 // Écrire des données sur le flux de sortie
-                writer.write("test d envoie de donnees\n")
+
+                writer.write(data)
                 writer.flush()
 
-                // Lire des données depuis le flux d'entrée
-                val serverResponse = reader.readLine()
-
-
                 socket.close()
+
             } catch (e: IOException) {
                 e.printStackTrace()
             }
-
-
         }
     }
+
+
 }
