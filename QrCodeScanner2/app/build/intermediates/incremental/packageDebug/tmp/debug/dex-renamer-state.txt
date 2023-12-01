@@ -1,4 +1,4 @@
-#Tue Nov 07 12:27:31 CET 2023
+#Fri Nov 17 14:52:40 CET 2023
 base.0=/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
