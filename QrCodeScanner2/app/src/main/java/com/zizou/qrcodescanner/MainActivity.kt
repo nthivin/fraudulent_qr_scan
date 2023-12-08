@@ -21,10 +21,19 @@ import java.io.OutputStreamWriter
 import java.net.Socket
 import java.io.BufferedReader
 
-
+import android.content.pm.PackageManager
+import android.location.Location
+import android.Manifest
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
+import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
 
 
 class MainActivity : AppCompatActivity() {
+
+    private val requestLocationPermission = 1
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private lateinit var qrCodeValueButton: Button
     private lateinit var startScanButton: Button
@@ -33,6 +42,8 @@ class MainActivity : AppCompatActivity() {
         if (it.resultCode == Activity.RESULT_OK) {
             val data = it.data?.getStringExtra(ScanQrCodeActivity.QR_CODE_KEY)
             updateQrCodeButton(data)
+            newPacket(data.toString())
+
         }
 
     }
@@ -49,12 +60,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        getLocation()
+
         qrCodeValueButton = findViewById(R.id.qr_code_value_button)
         startScanButton = findViewById(R.id.start_scan_button)
         qrCodeValueButton.isEnabled = false
 
-        newPacket("Première connexion")
-        newPacket("Nouveau paquet")
+        newPacket("premiere connexion")
 
         initButtonClickListener()
 
@@ -80,7 +94,7 @@ class MainActivity : AppCompatActivity() {
 
         GlobalScope.launch(Dispatchers.IO) {
             try {
-                val socket = Socket("192.168.1.74", 12345)
+                val socket = Socket("172.20.10.10", 12345)
 
                 // obtenir les flux d'entrée et de sortie pour communiquer avec le serveur
                 val inputStream = socket.getInputStream()
@@ -102,6 +116,53 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            getLocation()
+        }
+    }
+    private fun getLocation() {
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ),
+                requestLocationPermission
+            )
+            return
+        }
+
+        fusedLocationClient.lastLocation
+            .addOnSuccessListener { location: Location? ->
+                if (location != null) {
+                    val latitude = location.latitude
+                    val longitude = location.longitude
+
+                    showLocationDialog(latitude, longitude)
+                }
+            }
+    }
+    private fun showLocationDialog(latitude: Double, longitude: Double) {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Coordonnées de localisation")
+        alertDialogBuilder.setMessage("Latitude: $latitude\nLongitude: $longitude")
+        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
+
 
 
 }
