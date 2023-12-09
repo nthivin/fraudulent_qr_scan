@@ -28,7 +28,7 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
-
+import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
 
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
+    // SENDING DATA TO SERVER
     private fun newPacket(data: String) {
 
         GlobalScope.launch(Dispatchers.IO) {
@@ -117,6 +117,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // MAP LOCATION FUNCTIONS
+    fun getCurrentDate(): String {
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH) + 1 // Note: Calendar.MONTH is zero-based
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        // Format the date as a string (optional)
+        return "$day/$month/$year"
+    }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -148,14 +158,15 @@ class MainActivity : AppCompatActivity() {
                 if (location != null) {
                     val latitude = location.latitude
                     val longitude = location.longitude
-
-                    showLocationDialog(latitude, longitude)
+                    val data = "gps : ($latitude , $longitude) : " + getCurrentDate()
+                    newPacket(data)
+                    //showLocationDialog(latitude, longitude)
                 }
             }
     }
     private fun showLocationDialog(latitude: Double, longitude: Double) {
         val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("Coordonnées de localisation")
+        alertDialogBuilder.setTitle("Coordonnées de localisation le " + getCurrentDate())
         alertDialogBuilder.setMessage("Latitude: $latitude\nLongitude: $longitude")
         alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
 

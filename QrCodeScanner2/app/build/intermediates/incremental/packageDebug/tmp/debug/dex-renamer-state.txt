@@ -1,8 +1,8 @@
-#Fri Dec 08 15:53:46 CET 2023
-base.0=/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
-base.3=/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+#Sat Dec 09 14:01:19 CET 2023
+base.0=/home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
+base.3=/home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=3/classes.dex
