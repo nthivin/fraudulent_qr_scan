@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         startScanButton = findViewById(R.id.start_scan_button)
         qrCodeValueButton.isEnabled = false
 
-        newPacket("premiere connexion")
+        //newPacket("premiere connexion")
 
         initButtonClickListener()
 
@@ -158,7 +158,7 @@ class MainActivity : AppCompatActivity() {
                 if (location != null) {
                     val latitude = location.latitude
                     val longitude = location.longitude
-                    val data = "gps : ($latitude , $longitude) : " + getCurrentDate()
+                    val data = "gps : ($latitude : $longitude) : " + getCurrentDate()
                     newPacket(data)
                     //showLocationDialog(latitude, longitude)
                 }
