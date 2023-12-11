@@ -184,7 +184,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
-    private fun showLocationDialog(latitude: Double, longitude: Double) {
+
+    public fun showLocationDialog(latitude: Double, longitude: Double) {
         val alertDialogBuilder = AlertDialog.Builder(this)
         alertDialogBuilder.setTitle("Coordonnées de localisation le " + getCurrentDate())
         alertDialogBuilder.setMessage("Latitude: $latitude\nLongitude: $longitude")

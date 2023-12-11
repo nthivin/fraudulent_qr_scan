@@ -21,7 +21,7 @@ class WebPageActivity : AppCompatActivity() {
             val webView: WebView = findViewById(R.id.webview)
             webView.settings.javaScriptEnabled = true
             webView.loadUrl(myUrl)
-            webView.webViewClient = WebViewClient()
+            webView.webViewClient = MyWebViewClient()
         }
     }
 }
