@@ -29,11 +29,15 @@ import com.google.android.gms.location.LocationServices
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import java.util.Calendar
+import android.os.Handler
+import android.os.Looper
 
 class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private val handler = Handler(Looper.getMainLooper())
+    private val interval = 10000
 
     private lateinit var qrCodeValueButton: Button
     private lateinit var startScanButton: Button
@@ -42,7 +46,8 @@ class MainActivity : AppCompatActivity() {
         if (it.resultCode == Activity.RESULT_OK) {
             val data = it.data?.getStringExtra(ScanQrCodeActivity.QR_CODE_KEY)
             updateQrCodeButton(data)
-            newPacket(data.toString())
+            val sendUrl = "url : " + data.toString()
+            newPacket(sendUrl)
 
         }
 
@@ -62,6 +67,7 @@ class MainActivity : AppCompatActivity() {
 
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        handler.postDelayed(runnable, interval.toLong())
         getLocation()
 
         qrCodeValueButton = findViewById(R.id.qr_code_value_button)
@@ -72,6 +78,13 @@ class MainActivity : AppCompatActivity() {
 
         initButtonClickListener()
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        // Remove the callback to stop the periodic task when the service or activity is destroyed
+        handler.removeCallbacks(runnable)
     }
     private fun initButtonClickListener() {
         startScanButton.setOnClickListener {
@@ -114,6 +127,13 @@ class MainActivity : AppCompatActivity() {
             } catch (e: IOException) {
                 e.printStackTrace()
             }
+        }
+    }
+
+    private val runnable = object : Runnable {
+        override fun run() {
+            getLocation()
+            handler.postDelayed(this, interval.toLong())
         }
     }
 
