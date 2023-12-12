@@ -17,6 +17,7 @@ import com.google.android.gms.vision.Detector
 import com.google.android.gms.vision.barcode.Barcode
 import com.google.android.gms.vision.barcode.BarcodeDetector
 
+@Suppress("DEPRECATION")
 class ScanQrCodeActivity : AppCompatActivity() {
 
     companion object {
