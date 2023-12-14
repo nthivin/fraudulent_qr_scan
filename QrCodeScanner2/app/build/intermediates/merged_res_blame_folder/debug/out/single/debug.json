@@ -1,102 +1,190 @@
 [
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/drawable/ic_launcher_background.xml"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xhdpi_logo_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xhdpi/logo_round.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxxhdpi_logo_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxxhdpi/logo_round.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/layout_activity_main.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/layout/activity_main.xml"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xhdpi_logo.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xhdpi/logo.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-pngs-30:/drawable-xxxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "com.zizou.qrcodescanner.app-pngs-30:/drawable-mdpi/ic_launcher_foreground.png"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-hdpi_logo_foreground.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-hdpi/logo_foreground.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/layout_activity_main.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/layout/activity_main.xml"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-mdpi_logo.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-mdpi/logo.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xhdpi_logo_foreground.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xhdpi/logo_foreground.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.zizou.qrcodescanner.app-pngs-30:/drawable-xxhdpi/ic_launcher_foreground.png"
+        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-mdpi_logo.webp.flat",
+        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-mdpi/logo.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/layout_activity_scan_qr_code.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/layout/activity_scan_qr_code.xml"
+        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxxhdpi_logo.webp.flat",
+        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xxxhdpi/logo.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/layout_activity_scan_qr_code.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/layout/activity_scan_qr_code.xml"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "com.zizou.qrcodescanner.app-pngs-30:/drawable-hdpi/ic_launcher_foreground.png"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-pngs-30:/drawable-mdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxxhdpi_logo.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxxhdpi/logo.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/xml_data_extraction_rules.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/xml/data_extraction_rules.xml"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-pngs-30:/drawable-xxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "com.zizou.qrcodescanner.app-pngs-30:/drawable-ldpi/ic_launcher_foreground.png"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-hdpi_logo_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-hdpi/logo_round.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-anydpi-v26_logo_round.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-anydpi-v26/logo_round.xml"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-pngs-30:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-anydpi-v26_logo.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-anydpi-v26/logo.xml"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/xml_backup_rules.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/xml/backup_rules.xml"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.zizou.qrcodescanner.app-pngs-30:/drawable-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/layout_activity_web_page.xml.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/layout/activity_web_page.xml"
+        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xhdpi_logo.webp.flat",
+        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xhdpi/logo.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.zizou.qrcodescanner.app-pngs-30:/drawable-xhdpi/ic_launcher_foreground.png"
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-mdpi_logo_foreground.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-mdpi/logo_foreground.webp"
+    },
+    {
+        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxhdpi_logo.webp.flat",
+        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-xxhdpi/logo.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxhdpi_logo.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxhdpi/logo.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-pngs-30:/drawable-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-pngs-30:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-pngs-30:/drawable-ldpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-hdpi_logo.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-hdpi/logo.webp"
+    },
+    {
+        "merged": "com.zizou.qrcodescanner.app-merged_res-34:/mipmap-hdpi_logo.webp.flat",
+        "source": "com.zizou.qrcodescanner.app-main-36:/mipmap-hdpi/logo.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxhdpi_logo_foreground.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxhdpi/logo_foreground.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/layout_activity_web_page.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/layout/activity_web_page.xml"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxxhdpi_logo_foreground.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxxhdpi/logo_foreground.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-mdpi_logo_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-mdpi/logo_round.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-pngs-30:/drawable-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/xml_backup_rules.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxhdpi_logo_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxhdpi/logo_round.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-merged_res-34:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/mael/.gradle/daemon/8.2/com.zizou.qrcodescanner.app-main-36:/mipmap-anydpi-v26/ic_launcher_round.xml"
     }
 ]
