@@ -19,9 +19,14 @@ import android.annotation.SuppressLint
 import android.provider.Settings.Secure
 import android.content.Context
 
+/*import android.os.Build
+import android.telephony.TelephonyManager
+import androidx.annotation.RequiresApi*/
+
 class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
+    //private val requestIMEIPermission = 2
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private lateinit var qrCodeValueButton: Button
@@ -43,10 +48,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //@RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //getIMEI()
         getAndroidID(this)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
@@ -72,11 +79,15 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch(intent)
         }
     }
+    //@RequiresApi(Build.VERSION_CODES.O)
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
             getLocation()
         }
+        /*if (requestCode == requestIMEIPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            getIMEI()
+        }*/
     }
     private fun getLocation() {
         if (ActivityCompat.checkSelfPermission(
@@ -131,4 +142,34 @@ class MainActivity : AppCompatActivity() {
         val alertDialog: AlertDialog = alertDialogBuilder.create()
         alertDialog.show()
     }
+    /*@RequiresApi(Build.VERSION_CODES.O)
+    @SuppressLint("ServiceCast")
+    private fun getIMEI() {
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_PHONE_STATE
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(
+                    Manifest.permission.READ_PHONE_STATE
+                ),
+                requestIMEIPermission
+            )
+            return
+        }
+
+        val telephonyManager = getSystemService(TELEPHONY_SERVICE) as TelephonyManager
+        showIMEIDialog(telephonyManager.imei)
+    }
+    private fun showIMEIDialog(imei: String) {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("IMEI")
+        alertDialogBuilder.setMessage("IMEI: $imei")
+        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }*/
 }

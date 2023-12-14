@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-49:12
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-51:12
 MERGED from [com.google.android.material:material:1.10.0] /home/mael/.gradle/caches/transforms-3/2267d41d52bd10abd9c1f1fa4f572c70/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/mael/.gradle/caches/transforms-3/5a3d8f1450f9a1a04e1bdd38bbf63c11/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/mael/.gradle/caches/transforms-3/e7006985deb784b8ab419c541575c54c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -102,8 +102,8 @@ ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/ap
 	android:name
 		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:22-72
 application
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:17:5-47:19
-INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:17:5-47:19
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:5-49:19
+INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:5-49:19
 MERGED from [com.google.android.material:material:1.10.0] /home/mael/.gradle/caches/transforms-3/2267d41d52bd10abd9c1f1fa4f572c70/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] /home/mael/.gradle/caches/transforms-3/2267d41d52bd10abd9c1f1fa4f572c70/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/mael/.gradle/caches/transforms-3/5a3d8f1450f9a1a04e1bdd38bbf63c11/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -143,57 +143,57 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mael/.gradle/caches/t
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:24:9-35
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:26:9-35
 	android:label
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:9-41
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:24:9-41
 	android:fullBackupContent
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:9-54
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:9-54
 	android:roundIcon
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:9-54
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:9-54
 	tools:targetApi
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:26:9-29
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:28:9-29
 	android:icon
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:21:9-43
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:9-43
 	android:allowBackup
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:18:9-35
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:9-35
 	android:theme
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:9-51
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:27:9-51
 	android:dataExtractionRules
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:9-65
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:21:9-65
 activity#com.zizou.qrcodescanner.WebPageActivity
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:27:9-29:40
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:29:9-31:40
 	android:exported
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:29:13-37
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:28:13-44
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:13-44
 activity#com.zizou.qrcodescanner.ScanQrCodeActivity
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:9-32:40
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:13-37
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:31:13-47
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:33:13-47
 activity#com.zizou.qrcodescanner.MainActivity
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:33:9-41:20
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:35:9-43:20
 	android:exported
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:35:13-36
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:37:13-36
 	android:name
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:34:13-41
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:36:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:36:13-40:29
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:37:17-69
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:37:25-66
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:17-77
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:27-74
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:41:27-74
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:43:9-45:71
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:45:9-47:71
 	android:value
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:45:13-68
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:47:13-68
 	android:name
-		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:44:13-58
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:46:13-58
 uses-sdk
 INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml
