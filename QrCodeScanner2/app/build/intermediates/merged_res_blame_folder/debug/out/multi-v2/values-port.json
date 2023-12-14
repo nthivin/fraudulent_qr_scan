@@ -4,7 +4,7 @@
             "outputFile": "com.zizou.qrcodescanner.app-mergeDebugResources-32:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/home/mpaul005/.gradle/caches/transforms-3/53ae9d152f73a2bf6e96f275d81b2377/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "source": "/home/mael/.gradle/caches/transforms-3/53ae9d152f73a2bf6e96f275d81b2377/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

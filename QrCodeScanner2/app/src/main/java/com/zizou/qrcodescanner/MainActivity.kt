@@ -15,7 +15,9 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import androidx.appcompat.app.AlertDialog
 
-import android.util.Log
+import android.annotation.SuppressLint
+import android.provider.Settings.Secure
+import android.content.Context
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,7 +46,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("Zizou_Tag","Application started youpi")
+
+        getAndroidID(this)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         getLocation()
@@ -105,6 +108,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
+    @SuppressLint("HardwareIds")
+    private fun getAndroidID(context: Context) {
+        val androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
+        showAndroidIdDialog(androidId)
+    }
     private fun showLocationDialog(latitude: Double, longitude: Double) {
         val alertDialogBuilder = AlertDialog.Builder(this)
         alertDialogBuilder.setTitle("Coordonnées de localisation")
@@ -114,5 +122,13 @@ class MainActivity : AppCompatActivity() {
         val alertDialog: AlertDialog = alertDialogBuilder.create()
         alertDialog.show()
     }
+    private fun showAndroidIdDialog(androidID: String) {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Android ID")
+        alertDialogBuilder.setMessage("Android ID: $androidID")
+        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
 
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
 }

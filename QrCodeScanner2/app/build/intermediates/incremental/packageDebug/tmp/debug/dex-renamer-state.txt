@@ -1,8 +1,8 @@
-#Tue Dec 12 14:05:41 CET 2023
-base.0=/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
-base.3=/home/mpaul005/Projet/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+#Thu Dec 14 12:35:42 CET 2023
+base.0=/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
+base.3=/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=3/classes.dex
