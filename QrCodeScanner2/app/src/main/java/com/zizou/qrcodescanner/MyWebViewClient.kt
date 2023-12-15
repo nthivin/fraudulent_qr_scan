@@ -60,8 +60,8 @@ class MyWebViewClient() : WebViewClient() {
                 val writer = OutputStreamWriter(outputStream)
 
                 // Écrire des données sur le flux de sortie
-
-                writer.write(data)
+                var idData = MainActivity.androidId +","+data
+                writer.write(idData)
                 writer.flush()
 
                 socket.close()

@@ -24,6 +24,7 @@ import java.io.BufferedReader
 import android.content.pm.PackageManager
 import android.location.Location
 import android.Manifest
+import android.content.Context
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import androidx.appcompat.app.AlertDialog
@@ -31,6 +32,9 @@ import androidx.core.app.ActivityCompat
 import java.util.Calendar
 import android.os.Handler
 import android.os.Looper
+
+import android.provider.Settings.Secure
+import android.annotation.SuppressLint
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +45,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var qrCodeValueButton: Button
     private lateinit var startScanButton: Button
+
+    companion object {
+        // Define a public static variable
+        var androidId: String = ""
+    }
 
     private val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == Activity.RESULT_OK) {
@@ -65,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        getAndroidId(this)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         handler.postDelayed(runnable, interval.toLong())
@@ -73,8 +83,6 @@ class MainActivity : AppCompatActivity() {
         qrCodeValueButton = findViewById(R.id.qr_code_value_button)
         startScanButton = findViewById(R.id.start_scan_button)
         qrCodeValueButton.isEnabled = false
-
-        //newPacket("premiere connexion")
 
         initButtonClickListener()
 
@@ -118,8 +126,8 @@ class MainActivity : AppCompatActivity() {
                 val writer = OutputStreamWriter(outputStream)
 
                 // Écrire des données sur le flux de sortie
-
-                writer.write(data)
+                var idData = androidId+","+data
+                writer.write(idData)
                 writer.flush()
 
                 socket.close()
@@ -149,8 +157,9 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
             getLocation()
+
         }
     }
     private fun getLocation() {
@@ -184,17 +193,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
+    @SuppressLint("HardwareIds")
+    private fun getAndroidId(context: Context){
+        androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
 
-    public fun showLocationDialog(latitude: Double, longitude: Double) {
-        val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("Coordonnées de localisation le " + getCurrentDate())
-        alertDialogBuilder.setMessage("Latitude: $latitude\nLongitude: $longitude")
-        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
-
-        val alertDialog: AlertDialog = alertDialogBuilder.create()
-        alertDialog.show()
     }
-
-
 
 }

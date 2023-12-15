@@ -61,10 +61,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
+        <!--
+            meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAsQMtXEOompNP8b8hz5yZ4Yqt5XHU8EEA" />
+        -->
         <!-- Needs to be explicitly declared on P+ -->
         <uses-library
             android:name="org.apache.http.legacy"
