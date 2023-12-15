@@ -9,112 +9,143 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.CAMERA" />
-11-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:5:5-65
-11-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:5:22-62
+11-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:5:5-65
+11-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:5:22-62
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:6:5-67
-12-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:6:22-64
+12-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:6:5-67
+12-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:6:22-64
 13
-14    <permission
-14-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-15        android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-15-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-16        android:protectionLevel="signature" />
-16-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-17
-18    <uses-permission android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-18-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-18-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-19
-20    <application
-20-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:8:5-33:19
-21        android:allowBackup="true"
-21-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:9:9-35
-22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.9.0] /home/thivin/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-23        android:dataExtractionRules="@xml/data_extraction_rules"
-23-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:10:9-65
-24        android:debuggable="true"
-25        android:extractNativeLibs="false"
-26        android:fullBackupContent="@xml/backup_rules"
-26-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:11:9-54
-27        android:icon="@mipmap/ic_launcher"
-27-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:12:9-43
-28        android:label="@string/app_name"
-28-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:13:9-41
-29        android:roundIcon="@mipmap/ic_launcher_round"
-29-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:14:9-54
-30        android:supportsRtl="true"
-30-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:9-35
-31        android:testOnly="true"
-32        android:theme="@style/Theme.QrCodeScanner" >
-32-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:9-51
-33        <activity
-33-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:18:9-20:40
-34            android:name="com.zizou.qrcodescanner.WebPageActivity"
-34-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:13-44
-35            android:exported="false" />
-35-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:13-37
-36        <activity
-36-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:21:9-23:40
-37            android:name="com.zizou.qrcodescanner.ScanQrCodeActivity"
-37-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:13-47
-38            android:exported="false" />
-38-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:13-37
-39        <activity
-39-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:24:9-32:20
-40            android:name="com.zizou.qrcodescanner.MainActivity"
-40-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:13-41
-41            android:exported="true" >
-41-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:26:13-36
-42            <intent-filter>
-42-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:27:13-31:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:28:17-69
-43-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:28:25-66
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:17-77
-45-->/home/thivin/scanner_project/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:27-74
-46            </intent-filter>
-47        </activity>
-48        <activity
-48-->[com.google.android.gms:play-services-base:17.4.0] /home/thivin/.gradle/caches/transforms-3/eca569241ca35c1f23d05fec9f88903e/transformed/play-services-base-17.4.0/AndroidManifest.xml:23:9-26:75
-49            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-49-->[com.google.android.gms:play-services-base:17.4.0] /home/thivin/.gradle/caches/transforms-3/eca569241ca35c1f23d05fec9f88903e/transformed/play-services-base-17.4.0/AndroidManifest.xml:24:13-79
-50            android:exported="false"
-50-->[com.google.android.gms:play-services-base:17.4.0] /home/thivin/.gradle/caches/transforms-3/eca569241ca35c1f23d05fec9f88903e/transformed/play-services-base-17.4.0/AndroidManifest.xml:25:13-37
-51            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-51-->[com.google.android.gms:play-services-base:17.4.0] /home/thivin/.gradle/caches/transforms-3/eca569241ca35c1f23d05fec9f88903e/transformed/play-services-base-17.4.0/AndroidManifest.xml:26:13-72
-52
-53        <meta-data
-53-->[com.google.android.gms:play-services-basement:17.4.0] /home/thivin/.gradle/caches/transforms-3/19d9c93eeb53f2be9da907a5dee6d390/transformed/play-services-basement-17.4.0/AndroidManifest.xml:23:9-25:69
-54            android:name="com.google.android.gms.version"
-54-->[com.google.android.gms:play-services-basement:17.4.0] /home/thivin/.gradle/caches/transforms-3/19d9c93eeb53f2be9da907a5dee6d390/transformed/play-services-basement-17.4.0/AndroidManifest.xml:24:13-58
-55            android:value="@integer/google_play_services_version" />
-55-->[com.google.android.gms:play-services-basement:17.4.0] /home/thivin/.gradle/caches/transforms-3/19d9c93eeb53f2be9da907a5dee6d390/transformed/play-services-basement-17.4.0/AndroidManifest.xml:25:13-66
-56
-57        <provider
-57-->[androidx.emoji2:emoji2:1.2.0] /home/thivin/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-58            android:name="androidx.startup.InitializationProvider"
-58-->[androidx.emoji2:emoji2:1.2.0] /home/thivin/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-59            android:authorities="com.zizou.qrcodescanner.androidx-startup"
-59-->[androidx.emoji2:emoji2:1.2.0] /home/thivin/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-60            android:exported="false" >
-60-->[androidx.emoji2:emoji2:1.2.0] /home/thivin/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-61            <meta-data
-61-->[androidx.emoji2:emoji2:1.2.0] /home/thivin/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-62                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-62-->[androidx.emoji2:emoji2:1.2.0] /home/thivin/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-63                android:value="androidx.startup" />
-63-->[androidx.emoji2:emoji2:1.2.0] /home/thivin/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-64            <meta-data
-64-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/thivin/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-65-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/thivin/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-66                android:value="androidx.startup" />
-66-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/thivin/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-67        </provider>
-68    </application>
-69
-70</manifest>
+14    <uses-feature android:name="android.hardware.camera" />
+14-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:7:5-60
+14-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:7:19-57
+15    <uses-feature android:name="android.hardware.camera.autofocus" />
+15-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:8:5-70
+15-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:8:19-67
+16
+17    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+17-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:9:5-71
+17-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:9:22-68
+18
+19    <uses-feature android:name="android.hardware.camera.front" />
+19-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:10:5-66
+19-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:10:19-63
+20
+21    <permission
+21-->[androidx.core:core:1.9.0] /home/louis-victor/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+22        android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.9.0] /home/louis-victor/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.9.0] /home/louis-victor/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.9.0] /home/louis-victor/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.9.0] /home/louis-victor/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+26
+27    <application
+27-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:13:5-38:19
+28        android:allowBackup="true"
+28-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:14:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.9.0] /home/louis-victor/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+30        android:dataExtractionRules="@xml/data_extraction_rules"
+30-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:9-65
+31        android:debuggable="true"
+32        android:extractNativeLibs="false"
+33        android:fullBackupContent="@xml/backup_rules"
+33-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:9-54
+34        android:icon="@mipmap/ic_launcher"
+34-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:17:9-43
+35        android:label="@string/app_name"
+35-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:18:9-41
+36        android:roundIcon="@mipmap/ic_launcher_round"
+36-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:9-54
+37        android:supportsRtl="true"
+37-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:9-35
+38        android:testOnly="true"
+39        android:theme="@style/Theme.QrCodeScanner" >
+39-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:21:9-51
+40        <activity
+40-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:9-25:40
+41            android:name="com.zizou.qrcodescanner.WebPageActivity"
+41-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:24:13-44
+42            android:exported="false" />
+42-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:13-37
+43        <activity
+43-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:26:9-28:40
+44            android:name="com.zizou.qrcodescanner.ScanQrCodeActivity"
+44-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:27:13-47
+45            android:exported="false" />
+45-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:28:13-37
+46        <activity
+46-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:29:9-37:20
+47            android:name="com.zizou.qrcodescanner.MainActivity"
+47-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:13-41
+48            android:exported="true" >
+48-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:31:13-36
+49            <intent-filter>
+49-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:13-36:29
+50                <action android:name="android.intent.action.MAIN" />
+50-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:33:17-69
+50-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:33:25-66
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+52-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:35:17-77
+52-->/home/louis-victor/Documents/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:35:27-74
+53            </intent-filter>
+54        </activity>
+55        <activity
+55-->[com.google.android.gms:play-services-base:17.4.0] /home/louis-victor/.gradle/caches/transforms-3/eca569241ca35c1f23d05fec9f88903e/transformed/play-services-base-17.4.0/AndroidManifest.xml:23:9-26:75
+56            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+56-->[com.google.android.gms:play-services-base:17.4.0] /home/louis-victor/.gradle/caches/transforms-3/eca569241ca35c1f23d05fec9f88903e/transformed/play-services-base-17.4.0/AndroidManifest.xml:24:13-79
+57            android:exported="false"
+57-->[com.google.android.gms:play-services-base:17.4.0] /home/louis-victor/.gradle/caches/transforms-3/eca569241ca35c1f23d05fec9f88903e/transformed/play-services-base-17.4.0/AndroidManifest.xml:25:13-37
+58            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+58-->[com.google.android.gms:play-services-base:17.4.0] /home/louis-victor/.gradle/caches/transforms-3/eca569241ca35c1f23d05fec9f88903e/transformed/play-services-base-17.4.0/AndroidManifest.xml:26:13-72
+59
+60        <meta-data
+60-->[com.google.android.gms:play-services-basement:17.4.0] /home/louis-victor/.gradle/caches/transforms-3/19d9c93eeb53f2be9da907a5dee6d390/transformed/play-services-basement-17.4.0/AndroidManifest.xml:23:9-25:69
+61            android:name="com.google.android.gms.version"
+61-->[com.google.android.gms:play-services-basement:17.4.0] /home/louis-victor/.gradle/caches/transforms-3/19d9c93eeb53f2be9da907a5dee6d390/transformed/play-services-basement-17.4.0/AndroidManifest.xml:24:13-58
+62            android:value="@integer/google_play_services_version" />
+62-->[com.google.android.gms:play-services-basement:17.4.0] /home/louis-victor/.gradle/caches/transforms-3/19d9c93eeb53f2be9da907a5dee6d390/transformed/play-services-basement-17.4.0/AndroidManifest.xml:25:13-66
+63
+64        <service
+64-->[androidx.camera:camera-camera2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/bd22e43a19a5bb89b6d996a945be32a0/transformed/camera-camera2-1.2.0/AndroidManifest.xml:24:9-33:19
+65            android:name="androidx.camera.core.impl.MetadataHolderService"
+65-->[androidx.camera:camera-camera2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/bd22e43a19a5bb89b6d996a945be32a0/transformed/camera-camera2-1.2.0/AndroidManifest.xml:25:13-75
+66            android:enabled="false"
+66-->[androidx.camera:camera-camera2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/bd22e43a19a5bb89b6d996a945be32a0/transformed/camera-camera2-1.2.0/AndroidManifest.xml:26:13-36
+67            android:exported="false" >
+67-->[androidx.camera:camera-camera2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/bd22e43a19a5bb89b6d996a945be32a0/transformed/camera-camera2-1.2.0/AndroidManifest.xml:27:13-37
+68            <meta-data
+68-->[androidx.camera:camera-camera2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/bd22e43a19a5bb89b6d996a945be32a0/transformed/camera-camera2-1.2.0/AndroidManifest.xml:30:13-32:89
+69                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+69-->[androidx.camera:camera-camera2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/bd22e43a19a5bb89b6d996a945be32a0/transformed/camera-camera2-1.2.0/AndroidManifest.xml:31:17-103
+70                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+70-->[androidx.camera:camera-camera2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/bd22e43a19a5bb89b6d996a945be32a0/transformed/camera-camera2-1.2.0/AndroidManifest.xml:32:17-86
+71        </service>
+72
+73        <provider
+73-->[androidx.emoji2:emoji2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+74            android:name="androidx.startup.InitializationProvider"
+74-->[androidx.emoji2:emoji2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+75            android:authorities="com.zizou.qrcodescanner.androidx-startup"
+75-->[androidx.emoji2:emoji2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+76            android:exported="false" >
+76-->[androidx.emoji2:emoji2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+77            <meta-data
+77-->[androidx.emoji2:emoji2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+78-->[androidx.emoji2:emoji2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+79                android:value="androidx.startup" />
+79-->[androidx.emoji2:emoji2:1.2.0] /home/louis-victor/.gradle/caches/transforms-3/d39a1a71cb92445ad924395f05b3b45a/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/louis-victor/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+81                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+81-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/louis-victor/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+82                android:value="androidx.startup" />
+82-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/louis-victor/.gradle/caches/transforms-3/33f5673a7ce4ea52b4f73052faabfed1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+83        </provider>
+84    </application>
+85
+86</manifest>

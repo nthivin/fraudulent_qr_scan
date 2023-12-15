@@ -16,6 +16,18 @@ import com.google.android.gms.vision.CameraSource
 import com.google.android.gms.vision.Detector
 import com.google.android.gms.vision.barcode.Barcode
 import com.google.android.gms.vision.barcode.BarcodeDetector
+import androidx.camera.core.Camera
+import androidx.camera.core.CameraInfo
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageCapture
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.core.CameraControl
+import androidx.core.content.ContextCompat
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 class ScanQrCodeActivity : AppCompatActivity() {
 
@@ -27,12 +39,14 @@ class ScanQrCodeActivity : AppCompatActivity() {
     private lateinit var scanSurfaceView: SurfaceView
     private lateinit var barcodeDetector: BarcodeDetector
     private lateinit var cameraSource: CameraSource
+    private lateinit var cameraExecutor: ExecutorService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan_qr_code)
 
         scanSurfaceView = findViewById(R.id.scan_surface_view)
+
 
         initBarcodeDetector()
     }
@@ -55,7 +69,7 @@ class ScanQrCodeActivity : AppCompatActivity() {
         }
     }
     private fun cameraPermissionGranted(requestCode: Int, grantResults: IntArray): Boolean {
-        return requestCode == CAMERA_REQUEST_CODE && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
+        return requestCode == CAMERA_REQUEST_CODE && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED
     }
 
     private fun initBarcodeDetector() {
@@ -101,10 +115,11 @@ class ScanQrCodeActivity : AppCompatActivity() {
         scanSurfaceView.holder.addCallback(object : SurfaceHolder.Callback {
 
             override fun surfaceCreated(p0: SurfaceHolder) {
-                if (ActivityCompat.checkSelfPermission(this@ScanQrCodeActivity, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(this@ScanQrCodeActivity, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED ||
+                    ActivityCompat.checkSelfPermission(this@ScanQrCodeActivity, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
                     cameraSource.start(scanSurfaceView.holder)
                 } else {
-                    ActivityCompat.requestPermissions(this@ScanQrCodeActivity, arrayOf(Manifest.permission.CAMERA), CAMERA_REQUEST_CODE)
+                    ActivityCompat.requestPermissions(this@ScanQrCodeActivity, arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO), CAMERA_REQUEST_CODE)
                 }
             }
             override fun surfaceChanged(p0: SurfaceHolder, p1: Int, p2: Int, p3: Int) {}
@@ -114,4 +129,5 @@ class ScanQrCodeActivity : AppCompatActivity() {
             }
         })
     }
+
 }
