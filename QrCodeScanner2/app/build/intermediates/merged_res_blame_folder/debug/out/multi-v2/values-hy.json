@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zizou.qrcodescanner.app-mergeDebugResources-29:/values-hy/values-hy.xml",
+            "outputFile": "com.zizou.qrcodescanner.app-mergeDebugResources-34:/values-hy/values-hy.xml",
             "map": [
                 {
                     "source": "/home/thivin/.gradle/caches/transforms-3/dcb8c9b03f42b88d3a58ad22f72850c9/transformed/play-services-basement-18.1.0/res/values-hy/values.xml",

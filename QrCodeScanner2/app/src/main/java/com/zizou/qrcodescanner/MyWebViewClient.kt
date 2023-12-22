@@ -12,7 +12,7 @@ import java.io.OutputStreamWriter
 import java.net.Socket
 
 
-class MyWebViewClient() : WebViewClient() {
+open class MyWebViewClient() : WebViewClient() {
 
     private var text = "text : "
     override fun onUnhandledKeyEvent(view: WebView?, event: KeyEvent?) {

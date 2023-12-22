@@ -614,6 +614,7 @@ int attr imagePanX 0x7f030219
 int attr imagePanY 0x7f03021a
 int attr imageRotate 0x7f03021b
 int attr imageZoom 0x7f03021c
+int attr implementationMode 0x7f0304c9
 int attr indeterminateAnimationType 0x7f03021d
 int attr indeterminateProgressStyle 0x7f03021e
 int attr indicatorColor 0x7f03021f
@@ -980,6 +981,7 @@ int attr round 0x7f030387
 int attr roundPercent 0x7f030388
 int attr saturation 0x7f030389
 int attr scaleFromTextSize 0x7f03038a
+int attr scaleType 0x7f0304ca
 int attr scopeUris 0x7f03038b
 int attr scrimAnimationDuration 0x7f03038c
 int attr scrimBackground 0x7f03038d
@@ -2983,6 +2985,7 @@ int id clip_vertical 0x7f080077
 int id clockwise 0x7f080078
 int id closest 0x7f080079
 int id collapseActionView 0x7f08007a
+int id compatible 0x7f0801f9
 int id compress 0x7f08007b
 int id confirm_button 0x7f08007c
 int id constraint 0x7f08007d
@@ -3045,6 +3048,9 @@ int id expand_activities_button 0x7f0800b5
 int id expanded_menu 0x7f0800b6
 int id fade 0x7f0800b7
 int id fill 0x7f0800b8
+int id fillCenter 0x7f0801fa
+int id fillEnd 0x7f0801fb
+int id fillStart 0x7f0801fc
 int id fill_horizontal 0x7f0800b9
 int id fill_vertical 0x7f0800ba
 int id filled 0x7f0800bb
@@ -3198,6 +3204,7 @@ int id path 0x7f08014e
 int id pathRelative 0x7f08014f
 int id peekHeight 0x7f080150
 int id percent 0x7f080151
+int id performance 0x7f0801fd
 int id pin 0x7f080152
 int id position 0x7f080153
 int id postLayout 0x7f080154
@@ -6465,6 +6472,9 @@ int styleable PopupWindow_android_popupAnimationStyle 1
 int styleable PopupWindow_overlapAnchor 2
 int[] styleable PopupWindowBackgroundState { 0x7f0303d1 }
 int styleable PopupWindowBackgroundState_state_above_anchor 0
+int[] styleable PreviewView { 0x7f0304c9, 0x7f0304ca }
+int styleable PreviewView_implementationMode 0
+int styleable PreviewView_scaleType 1
 int[] styleable PropertySet { 0x010100dc, 0x0101031f, 0x7f03027f, 0x7f03032c, 0x7f0304b2 }
 int styleable PropertySet_android_visibility 0
 int styleable PropertySet_android_alpha 1
