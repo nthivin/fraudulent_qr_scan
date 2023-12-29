@@ -13,8 +13,8 @@
     <!--<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />-->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--<uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
-        tools:ignore="ProtectedPermissions" />-->
+    <uses-permission android:name="android.permission.READ_SMS"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
 
     <application
         android:allowBackup="true"
@@ -41,10 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!--<meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAsQMtXEOompNP8b8hz5yZ4Yqt5XHU8EEA" />-->
 
     </application>
 

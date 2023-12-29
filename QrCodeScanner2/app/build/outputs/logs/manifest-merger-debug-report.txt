@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-51:12
-INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-51:12
-INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-51:12
-INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-51:12
-MERGED from [com.google.android.material:material:1.10.0] /home/mael/.gradle/caches/transforms-3/2267d41d52bd10abd9c1f1fa4f572c70/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:2:1-47:12
+MERGED from [com.google.android.material:material:1.11.0] /home/mael/.gradle/caches/transforms-3/cbed64e75e489e8d84e9746d96547138/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/mael/.gradle/caches/transforms-3/5a3d8f1450f9a1a04e1bdd38bbf63c11/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/mael/.gradle/caches/transforms-3/e7006985deb784b8ab419c541575c54c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] /home/mael/.gradle/caches/transforms-3/53ae9d152f73a2bf6e96f275d81b2377/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -97,11 +97,17 @@ uses-permission#android.permission.READ_PHONE_STATE
 ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:5-75
 	android:name
 		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:22-72
+uses-permission#android.permission.READ_SMS
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:5-17:71
+	tools:ignore
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:17:9-68
+	android:name
+		ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:22-64
 application
-ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:5-49:19
-INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:5-49:19
-MERGED from [com.google.android.material:material:1.10.0] /home/mael/.gradle/caches/transforms-3/2267d41d52bd10abd9c1f1fa4f572c70/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.10.0] /home/mael/.gradle/caches/transforms-3/2267d41d52bd10abd9c1f1fa4f572c70/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+ADDED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:5-45:19
+INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:5-45:19
+MERGED from [com.google.android.material:material:1.11.0] /home/mael/.gradle/caches/transforms-3/cbed64e75e489e8d84e9746d96547138/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] /home/mael/.gradle/caches/transforms-3/cbed64e75e489e8d84e9746d96547138/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/mael/.gradle/caches/transforms-3/5a3d8f1450f9a1a04e1bdd38bbf63c11/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/mael/.gradle/caches/transforms-3/5a3d8f1450f9a1a04e1bdd38bbf63c11/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
@@ -188,8 +194,8 @@ uses-sdk
 INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml
 INJECTED from /home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.10.0] /home/mael/.gradle/caches/transforms-3/2267d41d52bd10abd9c1f1fa4f572c70/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.10.0] /home/mael/.gradle/caches/transforms-3/2267d41d52bd10abd9c1f1fa4f572c70/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /home/mael/.gradle/caches/transforms-3/cbed64e75e489e8d84e9746d96547138/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /home/mael/.gradle/caches/transforms-3/cbed64e75e489e8d84e9746d96547138/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/mael/.gradle/caches/transforms-3/5a3d8f1450f9a1a04e1bdd38bbf63c11/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/mael/.gradle/caches/transforms-3/5a3d8f1450f9a1a04e1bdd38bbf63c11/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/mael/.gradle/caches/transforms-3/e7006985deb784b8ab419c541575c54c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44

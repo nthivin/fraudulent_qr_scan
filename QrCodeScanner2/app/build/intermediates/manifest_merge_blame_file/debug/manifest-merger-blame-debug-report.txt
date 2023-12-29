@@ -34,191 +34,184 @@
 21    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 21-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:5-75
 21-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:15:22-72
-22
-23    <!-- Include required permissions for Google Maps API to run. -->
-24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-24-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
-24-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
-25
-26    <uses-feature
-26-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
-27        android:glEsVersion="0x00020000"
-27-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
-28        android:required="true" />
-28-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
-29
-30    <queries>
-30-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
-31
-32        <!-- Needs to be explicitly declared on Android R+ -->
-33        <package android:name="com.google.android.apps.maps" />
-33-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
-33-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
-34    </queries>
-35
-36    <permission
-36-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-37        android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-37-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-38        android:protectionLevel="signature" />
-38-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-39
-40    <uses-permission android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-40-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-40-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-41    <!--
-42<uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
-43        tools:ignore="ProtectedPermissions" />
-44    -->
-45    <application
-45-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:5-49:19
-46        android:allowBackup="true"
-46-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:9-35
-47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-47-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-48        android:dataExtractionRules="@xml/data_extraction_rules"
-48-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:21:9-65
-49        android:debuggable="true"
-50        android:extractNativeLibs="false"
-51        android:fullBackupContent="@xml/backup_rules"
-51-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:9-54
-52        android:icon="@mipmap/logo"
-52-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:9-36
-53        android:label="@string/app_name"
-53-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:24:9-41
-54        android:roundIcon="@mipmap/logo_round"
-54-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:9-47
-55        android:supportsRtl="true"
-55-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:26:9-35
-56        android:testOnly="true"
-57        android:theme="@style/Theme.QrCodeScanner" >
-57-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:27:9-51
-58        <activity
-58-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:29:9-31:40
-59            android:name="com.zizou.qrcodescanner.WebPageActivity"
-59-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:13-44
-60            android:exported="false" />
-60-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:31:13-37
-61        <activity
-61-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:9-34:40
-62            android:name="com.zizou.qrcodescanner.ScanQrCodeActivity"
-62-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:33:13-47
-63            android:exported="false" />
-63-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:34:13-37
-64        <activity
-64-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:35:9-43:20
-65            android:name="com.zizou.qrcodescanner.MainActivity"
-65-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:36:13-41
-66            android:exported="true" >
-66-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:37:13-36
-67            <intent-filter>
-67-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:38:13-42:29
-68                <action android:name="android.intent.action.MAIN" />
-68-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:17-69
-68-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:25-66
-69
-70                <category android:name="android.intent.category.LAUNCHER" />
-70-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:41:17-77
-70-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:41:27-74
-71            </intent-filter>
-72        </activity>
-73
-74        <!--
-75            <meta-data
-76            android:name="com.google.android.geo.API_KEY"
-77            android:value="AIzaSyAsQMtXEOompNP8b8hz5yZ4Yqt5XHU8EEA" />
-78        -->
-79
-80
-81        <!-- Needs to be explicitly declared on P+ -->
-82        <uses-library
-82-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
-83            android:name="org.apache.http.legacy"
-83-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
-84            android:required="false" />
-84-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+22    <uses-permission android:name="android.permission.READ_SMS" />
+22-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:5-17:71
+22-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:16:22-64
+23
+24    <!-- Include required permissions for Google Maps API to run. -->
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+25-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
+26
+27    <uses-feature
+27-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+28        android:glEsVersion="0x00020000"
+28-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+29        android:required="true" />
+29-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+30
+31    <queries>
+31-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
+32
+33        <!-- Needs to be explicitly declared on Android R+ -->
+34        <package android:name="com.google.android.apps.maps" />
+34-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+34-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+35    </queries>
+36
+37    <permission
+37-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+38        android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+38-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+39        android:protectionLevel="signature" />
+39-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+40
+41    <uses-permission android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+41-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+41-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+42
+43    <application
+43-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:19:5-45:19
+44        android:allowBackup="true"
+44-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:20:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.12.0] /home/mael/.gradle/caches/transforms-3/d9df576dcaca9e76e24725bc3e0fc475/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+46        android:dataExtractionRules="@xml/data_extraction_rules"
+46-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:21:9-65
+47        android:debuggable="true"
+48        android:extractNativeLibs="false"
+49        android:fullBackupContent="@xml/backup_rules"
+49-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:22:9-54
+50        android:icon="@mipmap/logo"
+50-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:23:9-36
+51        android:label="@string/app_name"
+51-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:24:9-41
+52        android:roundIcon="@mipmap/logo_round"
+52-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:25:9-47
+53        android:supportsRtl="true"
+53-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:26:9-35
+54        android:testOnly="true"
+55        android:theme="@style/Theme.QrCodeScanner" >
+55-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:27:9-51
+56        <activity
+56-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:29:9-31:40
+57            android:name="com.zizou.qrcodescanner.WebPageActivity"
+57-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:30:13-44
+58            android:exported="false" />
+58-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:31:13-37
+59        <activity
+59-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:32:9-34:40
+60            android:name="com.zizou.qrcodescanner.ScanQrCodeActivity"
+60-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:33:13-47
+61            android:exported="false" />
+61-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:34:13-37
+62        <activity
+62-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:35:9-43:20
+63            android:name="com.zizou.qrcodescanner.MainActivity"
+63-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:36:13-41
+64            android:exported="true" >
+64-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:37:13-36
+65            <intent-filter>
+65-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:38:13-42:29
+66                <action android:name="android.intent.action.MAIN" />
+66-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:17-69
+66-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:39:25-66
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+68-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:41:17-77
+68-->/home/mael/Documents/Projets_RSR/fraudulent_qr_scan/QrCodeScanner2/app/src/main/AndroidManifest.xml:41:27-74
+69            </intent-filter>
+70        </activity>
+71
+72        <!-- Needs to be explicitly declared on P+ -->
+73        <uses-library
+73-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+74            android:name="org.apache.http.legacy"
+74-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+75            android:required="false" />
+75-->[com.google.android.gms:play-services-maps:18.2.0] /home/mael/.gradle/caches/transforms-3/29a3cae5e140fbd774f4ab3e714c6a46/transformed/play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+76
+77        <activity
+77-->[com.google.android.gms:play-services-base:18.1.0] /home/mael/.gradle/caches/transforms-3/4cd64306ff022343094f46628a559e07/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+78            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+78-->[com.google.android.gms:play-services-base:18.1.0] /home/mael/.gradle/caches/transforms-3/4cd64306ff022343094f46628a559e07/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+79            android:exported="false"
+79-->[com.google.android.gms:play-services-base:18.1.0] /home/mael/.gradle/caches/transforms-3/4cd64306ff022343094f46628a559e07/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+80            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+80-->[com.google.android.gms:play-services-base:18.1.0] /home/mael/.gradle/caches/transforms-3/4cd64306ff022343094f46628a559e07/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+81
+82        <meta-data
+82-->[com.google.android.gms:play-services-basement:18.1.0] /home/mael/.gradle/caches/transforms-3/352cba7999c5272f6801a28dc852c5c8/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+83            android:name="com.google.android.gms.version"
+83-->[com.google.android.gms:play-services-basement:18.1.0] /home/mael/.gradle/caches/transforms-3/352cba7999c5272f6801a28dc852c5c8/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+84            android:value="@integer/google_play_services_version" />
+84-->[com.google.android.gms:play-services-basement:18.1.0] /home/mael/.gradle/caches/transforms-3/352cba7999c5272f6801a28dc852c5c8/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
 85
-86        <activity
-86-->[com.google.android.gms:play-services-base:18.1.0] /home/mael/.gradle/caches/transforms-3/4cd64306ff022343094f46628a559e07/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-87            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-87-->[com.google.android.gms:play-services-base:18.1.0] /home/mael/.gradle/caches/transforms-3/4cd64306ff022343094f46628a559e07/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-88            android:exported="false"
-88-->[com.google.android.gms:play-services-base:18.1.0] /home/mael/.gradle/caches/transforms-3/4cd64306ff022343094f46628a559e07/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-89            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-89-->[com.google.android.gms:play-services-base:18.1.0] /home/mael/.gradle/caches/transforms-3/4cd64306ff022343094f46628a559e07/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-90
-91        <meta-data
-91-->[com.google.android.gms:play-services-basement:18.1.0] /home/mael/.gradle/caches/transforms-3/352cba7999c5272f6801a28dc852c5c8/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-92            android:name="com.google.android.gms.version"
-92-->[com.google.android.gms:play-services-basement:18.1.0] /home/mael/.gradle/caches/transforms-3/352cba7999c5272f6801a28dc852c5c8/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-93            android:value="@integer/google_play_services_version" />
-93-->[com.google.android.gms:play-services-basement:18.1.0] /home/mael/.gradle/caches/transforms-3/352cba7999c5272f6801a28dc852c5c8/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-94
-95        <provider
-95-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-96            android:name="androidx.startup.InitializationProvider"
-96-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-97            android:authorities="com.zizou.qrcodescanner.androidx-startup"
-97-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-98            android:exported="false" >
-98-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-99            <meta-data
-99-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-100                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-100-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-101                android:value="androidx.startup" />
-101-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-102            <meta-data
-102-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mael/.gradle/caches/transforms-3/a2119e73db488a4058f50c8bea0f76ca/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
-103                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-103-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mael/.gradle/caches/transforms-3/a2119e73db488a4058f50c8bea0f76ca/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
-104                android:value="androidx.startup" />
-104-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mael/.gradle/caches/transforms-3/a2119e73db488a4058f50c8bea0f76ca/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
-105            <meta-data
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-106                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-107                android:value="androidx.startup" />
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-108        </provider>
-109
-110        <receiver
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-111            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-112            android:directBootAware="false"
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-113            android:enabled="true"
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-114            android:exported="true"
-114-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-115            android:permission="android.permission.DUMP" >
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+86        <provider
+86-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+87            android:name="androidx.startup.InitializationProvider"
+87-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+88            android:authorities="com.zizou.qrcodescanner.androidx-startup"
+88-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+89            android:exported="false" >
+89-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+90            <meta-data
+90-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+91-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+92                android:value="androidx.startup" />
+92-->[androidx.emoji2:emoji2:1.2.0] /home/mael/.gradle/caches/transforms-3/164dd86fcb605d7d332ad0bb3c68e6c6/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+93            <meta-data
+93-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mael/.gradle/caches/transforms-3/a2119e73db488a4058f50c8bea0f76ca/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+94                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+94-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mael/.gradle/caches/transforms-3/a2119e73db488a4058f50c8bea0f76ca/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+95                android:value="androidx.startup" />
+95-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mael/.gradle/caches/transforms-3/a2119e73db488a4058f50c8bea0f76ca/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+96            <meta-data
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+97                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+98                android:value="androidx.startup" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+99        </provider>
+100
+101        <receiver
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+102            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+103            android:directBootAware="false"
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+104            android:enabled="true"
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+105            android:exported="true"
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+106            android:permission="android.permission.DUMP" >
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+108                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+109            </intent-filter>
+110            <intent-filter>
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+111                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+112            </intent-filter>
+113            <intent-filter>
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+114                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+115            </intent-filter>
 116            <intent-filter>
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-117                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+117                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
 118            </intent-filter>
-119            <intent-filter>
-119-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-120                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-120-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-120-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-121            </intent-filter>
-122            <intent-filter>
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-123                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-124            </intent-filter>
-125            <intent-filter>
-125-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-126                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mael/.gradle/caches/transforms-3/d44ecac6aba66a9afe17f960d6e07f3b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-127            </intent-filter>
-128        </receiver>
-129    </application>
-130
-131</manifest>
+119        </receiver>
+120    </application>
+121
+122</manifest>

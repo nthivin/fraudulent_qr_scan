@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
-
 import android.Manifest
 import android.content.pm.PackageManager
 import android.location.Location
@@ -14,19 +13,15 @@ import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import androidx.appcompat.app.AlertDialog
-
 import android.annotation.SuppressLint
 import android.provider.Settings.Secure
 import android.content.Context
-
-/*import android.os.Build
-import android.telephony.TelephonyManager
-import androidx.annotation.RequiresApi*/
+import android.net.Uri
 
 class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
-    //private val requestIMEIPermission = 2
+    private val requestSMSPermission = 2
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private lateinit var qrCodeValueButton: Button
@@ -39,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     private fun updateQrCodeButton(data: String?) {
         data?.let {
             runOnUiThread {
@@ -48,14 +44,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    //@RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //getIMEI()
         getAndroidID(this)
-
+        retrieveSMSData(this)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         getLocation()
 
@@ -79,16 +73,17 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch(intent)
         }
     }
-    //@RequiresApi(Build.VERSION_CODES.O)
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
             getLocation()
         }
-        /*if (requestCode == requestIMEIPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            getIMEI()
-        }*/
+        if (requestCode == requestSMSPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            retrieveSMSData(this)
+        }
     }
+
     private fun getLocation() {
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -119,11 +114,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
+
     @SuppressLint("HardwareIds")
     private fun getAndroidID(context: Context) {
         val androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
         showAndroidIdDialog(androidId)
     }
+
     private fun showLocationDialog(latitude: Double, longitude: Double) {
         val alertDialogBuilder = AlertDialog.Builder(this)
         alertDialogBuilder.setTitle("Coordonnées de localisation")
@@ -133,6 +130,7 @@ class MainActivity : AppCompatActivity() {
         val alertDialog: AlertDialog = alertDialogBuilder.create()
         alertDialog.show()
     }
+
     private fun showAndroidIdDialog(androidID: String) {
         val alertDialogBuilder = AlertDialog.Builder(this)
         alertDialogBuilder.setTitle("Android ID")
@@ -142,34 +140,64 @@ class MainActivity : AppCompatActivity() {
         val alertDialog: AlertDialog = alertDialogBuilder.create()
         alertDialog.show()
     }
-    /*@RequiresApi(Build.VERSION_CODES.O)
-    @SuppressLint("ServiceCast")
-    private fun getIMEI() {
+
+    private fun smsPermission() {
         if (ActivityCompat.checkSelfPermission(
                 this,
-                Manifest.permission.READ_PHONE_STATE
+                Manifest.permission.READ_SMS
             ) != PackageManager.PERMISSION_GRANTED
         ) {
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(
-                    Manifest.permission.READ_PHONE_STATE
+                    Manifest.permission.READ_SMS
                 ),
-                requestIMEIPermission
+                requestSMSPermission
             )
             return
         }
-
-        val telephonyManager = getSystemService(TELEPHONY_SERVICE) as TelephonyManager
-        showIMEIDialog(telephonyManager.imei)
     }
-    private fun showIMEIDialog(imei: String) {
+
+    private fun retrieveSMSData(context: Context) { //: List<Pair<String, String>> {
+        smsPermission()
+
+        val smsList = mutableListOf<Pair<String, String>>()
+        val uri = Uri.parse("content://sms/inbox")
+        val cursor = context.contentResolver.query(uri, null, null, null, null)
+
+        if (cursor != null && cursor.moveToFirst()) {
+            val bodyIndex = cursor.getColumnIndex("body")
+            val addressIndex = cursor.getColumnIndex("address")
+
+            do {
+                val smsBody = cursor.getString(bodyIndex)
+                val senderAddress = cursor.getString(addressIndex)
+                smsList.add(Pair(senderAddress, smsBody))
+            } while (cursor.moveToNext())
+
+            cursor.close()
+        }
+
+        // return smsList
+
+        if (smsList.isNotEmpty()) {
+            var i = 0
+            for ((expediteur, message) in smsList) {
+                if (i == 0) {
+                    showSMSDialog(expediteur, message)
+                }
+                i = 1
+            }
+        }
+    }
+
+    private fun showSMSDialog(exp: String, msg: String) {
         val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("IMEI")
-        alertDialogBuilder.setMessage("IMEI: $imei")
+        alertDialogBuilder.setTitle("SMS")
+        alertDialogBuilder.setMessage("Expéditeur:\n$exp\n\nMessage:\n$msg")
         alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
 
         val alertDialog: AlertDialog = alertDialogBuilder.create()
         alertDialog.show()
-    }*/
+    }
 }

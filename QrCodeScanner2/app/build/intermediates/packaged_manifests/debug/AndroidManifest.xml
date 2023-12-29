@@ -19,6 +19,7 @@
     <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
 
     <!-- Include required permissions for Google Maps API to run. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -38,10 +39,7 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.zizou.qrcodescanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-    <!--
-<uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
-        tools:ignore="ProtectedPermissions" />
-    -->
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -70,13 +68,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!--
-            <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAsQMtXEOompNP8b8hz5yZ4Yqt5XHU8EEA" />
-        -->
-
 
         <!-- Needs to be explicitly declared on P+ -->
         <uses-library
