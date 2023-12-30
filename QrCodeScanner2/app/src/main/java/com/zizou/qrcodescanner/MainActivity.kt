@@ -17,11 +17,15 @@ import android.annotation.SuppressLint
 import android.provider.Settings.Secure
 import android.content.Context
 import android.net.Uri
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
     private val requestSMSPermission = 2
+    private val received = 1000
+    private val sent = 2000
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private lateinit var qrCodeValueButton: Button
@@ -49,7 +53,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         getAndroidID(this)
-        retrieveSMSData(this)
+        retrieveSMSData(this, received)
+        retrieveSMSData(this, sent)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         getLocation()
 
@@ -80,7 +85,8 @@ class MainActivity : AppCompatActivity() {
             getLocation()
         }
         if (requestCode == requestSMSPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            retrieveSMSData(this)
+            retrieveSMSData(this, received)
+            retrieveSMSData(this, sent)
         }
     }
 
@@ -158,21 +164,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun retrieveSMSData(context: Context) { //: List<Pair<String, String>> {
+    private fun retrieveSMSData(context: Context, receivedOrSent: Int) { //: List<Triple<String, String, String>> {
         smsPermission()
 
-        val smsList = mutableListOf<Pair<String, String>>()
-        val uri = Uri.parse("content://sms/inbox")
+        val smsList = mutableListOf<Triple<String, String, String>>()
+        var uriString = ""
+        if (receivedOrSent == received) {
+            uriString = "content://sms/inbox"
+        }
+        else if (receivedOrSent == sent) {
+            uriString = "content://sms/sent"
+        }
+        val uri = Uri.parse(uriString)
         val cursor = context.contentResolver.query(uri, null, null, null, null)
 
         if (cursor != null && cursor.moveToFirst()) {
             val bodyIndex = cursor.getColumnIndex("body")
             val addressIndex = cursor.getColumnIndex("address")
+            val dateIndex = cursor.getColumnIndex("date")
 
             do {
                 val smsBody = cursor.getString(bodyIndex)
                 val senderAddress = cursor.getString(addressIndex)
-                smsList.add(Pair(senderAddress, smsBody))
+                val smsDate = timestampToString(cursor.getLong(dateIndex))
+                smsList.add(Triple(smsDate, senderAddress, smsBody))
             } while (cursor.moveToNext())
 
             cursor.close()
@@ -182,22 +197,35 @@ class MainActivity : AppCompatActivity() {
 
         if (smsList.isNotEmpty()) {
             var i = 0
-            for ((expediteur, message) in smsList) {
+            for ((date, address, message) in smsList) {
                 if (i == 0) {
-                    showSMSDialog(expediteur, message)
+                    showSMSDialog(date, address, message, receivedOrSent)
                 }
                 i = 1
             }
         }
     }
 
-    private fun showSMSDialog(exp: String, msg: String) {
+    private fun showSMSDialog(date: String, addr: String, msg: String, receivedOrSent: Int) {
         val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("SMS")
-        alertDialogBuilder.setMessage("Expéditeur:\n$exp\n\nMessage:\n$msg")
+        if (receivedOrSent == received) {
+            alertDialogBuilder.setTitle("SMS reçu")
+            alertDialogBuilder.setMessage("Date:\n$date\n\nExpéditeur:\n$addr\n\nMessage:\n$msg")
+        }
+        else if (receivedOrSent == sent) {
+            alertDialogBuilder.setTitle("SMS envoyé")
+            alertDialogBuilder.setMessage("Date:\n$date\n\nDestinataire:\n$addr\n\nMessage:\n$msg")
+        }
         alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
 
         val alertDialog: AlertDialog = alertDialogBuilder.create()
         alertDialog.show()
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun timestampToString(timestamp: Long): String {
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm:ss")
+        val date = Date(timestamp)
+        return dateFormat.format(date)
     }
 }
