@@ -1,3 +1,5 @@
+// SCAN ACTIVITY USING THE CAMERA
+
 package com.zizou.qrcodescanner
 
 import android.Manifest
@@ -50,7 +52,7 @@ class ScanQrCodeActivity : AppCompatActivity() {
             overridePendingTransition(0, 0)
 
         } else {
-            Toast.makeText(this, "Camera is mandatory to scan QR code", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Camera is mandatory to scan QR codes", Toast.LENGTH_SHORT).show()
             finish()
         }
     }

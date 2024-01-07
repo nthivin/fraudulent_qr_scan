@@ -5,7 +5,7 @@
     <string name="app_name">QrCodeScanner</string>
     <style name="Base.Theme.QrCodeScanner" parent="Theme.Material3.DayNight.NoActionBar">
         
-        
+        <item name="colorPrimary">#3498DB</item>
     </style>
     <style name="Theme.QrCodeScanner" parent="Base.Theme.QrCodeScanner"/>
 </resources>

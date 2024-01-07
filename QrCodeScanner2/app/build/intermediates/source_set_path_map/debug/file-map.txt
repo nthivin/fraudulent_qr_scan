@@ -30,10 +30,10 @@ com.zizou.qrcodescanner.app-appcompat-1.6.1-28 /home/thivin/.gradle/caches/trans
 com.zizou.qrcodescanner.app-camera-video-1.2.0-29 /home/thivin/.gradle/caches/transforms-3/ed194cef4252990b0d189482da95ef51/transformed/camera-video-1.2.0/res
 com.zizou.qrcodescanner.app-lifecycle-viewmodel-2.5.1-30 /home/thivin/.gradle/caches/transforms-3/ef65799e2fec5373409f9725bd7a643c/transformed/lifecycle-viewmodel-2.5.1/res
 com.zizou.qrcodescanner.app-viewpager2-1.0.0-31 /home/thivin/.gradle/caches/transforms-3/f27cc9987ff57f135654f4a6a31b5537/transformed/viewpager2-1.0.0/res
-com.zizou.qrcodescanner.app-pngs-32 /home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/generated/res/pngs/debug
-com.zizou.qrcodescanner.app-resValues-33 /home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/generated/res/resValues/debug
-com.zizou.qrcodescanner.app-packageDebugResources-34 /home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.zizou.qrcodescanner.app-packageDebugResources-35 /home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.zizou.qrcodescanner.app-merged_res-36 /home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/merged_res/debug
-com.zizou.qrcodescanner.app-debug-37 /home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/debug/res
-com.zizou.qrcodescanner.app-main-38 /home/thivin/projet_scanner/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res
+com.zizou.qrcodescanner.app-pngs-32 /home/thivin/projet_scan/fraudulent_qr_scan/QrCodeScanner2/app/build/generated/res/pngs/debug
+com.zizou.qrcodescanner.app-resValues-33 /home/thivin/projet_scan/fraudulent_qr_scan/QrCodeScanner2/app/build/generated/res/resValues/debug
+com.zizou.qrcodescanner.app-packageDebugResources-34 /home/thivin/projet_scan/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.zizou.qrcodescanner.app-packageDebugResources-35 /home/thivin/projet_scan/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.zizou.qrcodescanner.app-merged_res-36 /home/thivin/projet_scan/fraudulent_qr_scan/QrCodeScanner2/app/build/intermediates/merged_res/debug
+com.zizou.qrcodescanner.app-debug-37 /home/thivin/projet_scan/fraudulent_qr_scan/QrCodeScanner2/app/src/debug/res
+com.zizou.qrcodescanner.app-main-38 /home/thivin/projet_scan/fraudulent_qr_scan/QrCodeScanner2/app/src/main/res

