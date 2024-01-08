@@ -1,4 +1,11 @@
 
+# Default ignored files
+QrCodeScanner2/.idea/codeStyles/Project.xml
+QrCodeScanner2/.idea/codeStyles/codeStyleConfig.xml
+QrCodeScanner2/.idea/vcs.xml
+.idea/
+
+
 QrCodeScanner2/.gradle/8.0/executionHistory/executionHistory.bin
 QrCodeScanner2/.gradle/8.0/executionHistory/executionHistory.lock
 QrCodeScanner2/.gradle/8.0/fileHashes/fileHashes.bin
