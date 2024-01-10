@@ -1409,6 +1409,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color logo_background
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -3562,6 +3563,9 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap logo
+mipmap logo_foreground
+mipmap logo_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
