@@ -1,4 +1,11 @@
-# fraudulent_qr_scan
-A fake app to scan your qr codes and redirect you to malicious websites as well as other things
+# Fraudulent QR Code Scanner
 
-test branch web
+A malicious app for scanning QR codes, but which also collects your personal information.
+
+### Authors :
+
+Nathan THIVIN  
+Louis-Victor LADAGNOUS  
+PAUL Maël  
+
+![Logo](app-logo.png)
