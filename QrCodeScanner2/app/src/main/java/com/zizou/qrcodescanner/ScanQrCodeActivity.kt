@@ -19,6 +19,7 @@ import com.google.android.gms.vision.Detector
 import com.google.android.gms.vision.barcode.Barcode
 import com.google.android.gms.vision.barcode.BarcodeDetector
 
+@Suppress("DEPRECATION")
 class ScanQrCodeActivity : AppCompatActivity() {
 
     companion object {
@@ -56,6 +57,7 @@ class ScanQrCodeActivity : AppCompatActivity() {
             finish()
         }
     }
+
     private fun cameraPermissionGranted(requestCode: Int, grantResults: IntArray): Boolean {
         return requestCode == CAMERA_REQUEST_CODE && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
     }
