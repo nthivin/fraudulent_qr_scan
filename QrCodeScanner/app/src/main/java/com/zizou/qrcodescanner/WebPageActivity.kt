@@ -132,6 +132,7 @@ class WebPageActivity : AppCompatActivity() {
             setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
             setVideoSize(1920, 1080)
             setVideoFrameRate(60)
+            setOrientationHint(270)
             prepare()
         }
 
