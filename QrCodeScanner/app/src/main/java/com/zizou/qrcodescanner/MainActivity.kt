@@ -40,8 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     private val requestLocationPermission = 1
     private val requestSMSPermission = 2
-    private val requestPhonePermission = 3
-    private val requestAllPermission = 4
+    private val requestAllPermission = 3
     private val received = 1000
     private val sent = 2000
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -135,9 +134,6 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
                 this,
-                Manifest.permission.READ_PHONE_STATE
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
                 Manifest.permission.READ_SMS
             ) != PackageManager.PERMISSION_GRANTED
         ) {
@@ -148,7 +144,6 @@ class MainActivity : AppCompatActivity() {
                     Manifest.permission.RECORD_AUDIO,
                     Manifest.permission.ACCESS_FINE_LOCATION,
                     Manifest.permission.ACCESS_COARSE_LOCATION,
-                    Manifest.permission.READ_PHONE_STATE,
                     Manifest.permission.READ_SMS
                 ),
                 requestAllPermission
@@ -171,17 +166,12 @@ class MainActivity : AppCompatActivity() {
             retrieveSMSData(this, received)
             retrieveSMSData(this, sent)
         }
-        if (requestCode == requestPhonePermission
-            && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            getAndroidId(this)
-        }
         if (requestCode == requestAllPermission
             && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
             && grantResults[1] == PackageManager.PERMISSION_GRANTED
             && grantResults[2] == PackageManager.PERMISSION_GRANTED
             && grantResults[3] == PackageManager.PERMISSION_GRANTED
-            && grantResults[4] == PackageManager.PERMISSION_GRANTED
-            && grantResults[5] == PackageManager.PERMISSION_GRANTED) {
+            && grantResults[4] == PackageManager.PERMISSION_GRANTED) {
             requestAllPermissions()
         }
     }
@@ -262,22 +252,6 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("HardwareIds")
     private fun getAndroidId(context: Context) {
-
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.READ_PHONE_STATE
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(
-                    Manifest.permission.READ_PHONE_STATE
-                ),
-                requestPhonePermission
-            )
-            return
-        }
-
         androidId = Secure.getString(context.contentResolver, Secure.ANDROID_ID)
     }
 
