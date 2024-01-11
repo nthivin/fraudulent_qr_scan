@@ -232,6 +232,8 @@ class WebPageActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 Log.e("Error reaching server", "The phone cannot reach the server",e)
             }
+
+            deleteVideo(uri)
         }
     }
 
@@ -242,6 +244,16 @@ class WebPageActivity : AppCompatActivity() {
 
         if (inputStream != null) {
             sendVideoOverSocket(inputStream)
+        }
+    }
+
+    private fun deleteVideo(uri: Uri): Boolean {
+        return try {
+            val rowsDeleted = contentResolver.delete(uri, null, null)
+            rowsDeleted > 0 // true if the deletion was successful
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
         }
     }
 }
