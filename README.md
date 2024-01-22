@@ -6,6 +6,6 @@ A malicious app for scanning QR codes, but which also collects your personal inf
 
 Nathan THIVIN  
 Louis-Victor LADAGNOUS  
-PAUL Maël  
+Maël PAUL
 
 ![Logo](app-logo.png)
